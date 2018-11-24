@@ -14,7 +14,7 @@ import project.bc.nu.projects.SQLite.myDBClass;
 
 public class AddActivityManager extends AppCompatActivity {
     private int REQUEST_CODE_GALLERY = 100;
-    public static MyDB db;
+    public static myDBClass db;
     String arrData[][];
 
 
@@ -22,7 +22,7 @@ public class AddActivityManager extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manager_add_veg_dis);
-        final MyDB db = new MyDB(this);
+        final myDBClass db = new myDBClass(this);
 /*
         db.InsertData("โรคแอนแทรกโนส (กุ้งแห้ง)","ผล", "กลุ่มพริก",
                 "เกิดจาก เชื้อรา Colletotrichum spp.","มีจุดฉ่ำน้ำ เล็กๆมีลักษณะแผลบุ๋มลึกลงไปเล็กน้อย","มีะแผลขยายออกไปในลักษณะวงรีหรือวงกลมซ้อนกันเป็นชั้น ๆ","1. ไม่ใช้เมล็ดจากผลพริกที่เป็นโรคทำพันธุ์ เนื่องจากเชื้อโรคสามารถติดไปกับเมล็ด\n" +
@@ -148,7 +148,7 @@ public class AddActivityManager extends AppCompatActivity {
 
         }
     }
-/*
+*/
     private void init() {
         EditText tVegdisName = (EditText) findViewById(R.id.addName);
         EditText tVegdisArea = (EditText) findViewById(R.id.addArea);
@@ -159,7 +159,7 @@ public class AddActivityManager extends AppCompatActivity {
         EditText tRemedy = (EditText) findViewById(R.id.addRemedy);
         EditText tNameImage = (EditText) findViewById(R.id.addNameImage);
     }
-*/
+
 
     public boolean SaveData() {
         //addName,addSyndrome,addRemedy
@@ -181,7 +181,7 @@ public class AddActivityManager extends AppCompatActivity {
 
 
         // new Class DB
-        final MyDB db = new MyDB(this);
+        final myDBClass db = new myDBClass(this);
 
 
         // Save Data

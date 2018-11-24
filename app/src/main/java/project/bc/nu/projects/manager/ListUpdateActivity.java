@@ -24,7 +24,7 @@ public class ListUpdateActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_update_veg_dis);
 
-        final MyDB myDb = new MyDB(this);
+        final myDBClass myDb = new myDBClass(this);
         final ArrayList<HashMap<String, String>> VegdisList = myDb.SelectAllData();
 
         // listView1

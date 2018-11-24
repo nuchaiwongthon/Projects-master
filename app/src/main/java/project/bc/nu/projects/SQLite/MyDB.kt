@@ -32,29 +32,6 @@ class MyDB(private val context: Context) : SQLiteOpenHelper(context, MyDB.Databa
 
         db.execSQL("CREATE TABLE ${MyDB.myData} (_id INTEGER PRIMARY KEY AUTOINCREMENT, $ID INTEGER,$NAME TEXT,$YEAR INTEGER,$MONTH INTEGER,$DAY INTEGER,$PASS INTEGER)")
 
-        db.execSQL("create table " + MyDB.vegdis_table + " (vegdis_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL" +
-                ",vegdis_name TEXT," +
-                "vegdis_area TEXT," +
-                "vegdis_type TEXT," +
-                "vegdis_cause TEXT," +
-                "vegdis_syndrome1 TEXT," +
-                "vegdis_syndrome2 TEXT," +
-                "vegdis_protect TEXT," +
-                "vegdis_remedy TEXT," +
-                "vegdis_gallery_name TEXT," +
-                "vegdis_gallery_path TEXT);")
-
-        db.execSQL("create table " + MyDB.veg_table + " (veg_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL" +
-                ",veg_name_th TEXT," +
-                "veg_name_cm TEXT," +
-                "veg_name_sc TEXT," +
-                "veg_structure TEXT," +
-                "veg_nutrient TEXT," +
-                "veg_plant TEXT," +
-                "veg_treatment TEXT," +
-                "veg_type TEXT," +
-                "veg_gallery_name TEXT," +
-                "veg_gallery_path TEXT);")
 
         db.init()
 
@@ -106,7 +83,7 @@ class MyDB(private val context: Context) : SQLiteOpenHelper(context, MyDB.Databa
 
         this.insert(MyDB.myData, null, values)
 
-    
+
     }
     fun setVegatable(id: Int) {
         var data = getVEGInfo(id)

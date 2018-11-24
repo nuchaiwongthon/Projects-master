@@ -34,10 +34,21 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:fontFamily="@font/kanit_light"
-                android:text="วินิจฉัยโรคเบื้องต้น"
+                android:text="วิเคราะห์โรคพืช"
                 android:textAppearance="@style/TextAppearance.AppCompat"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp" />
+            <ImageView
+                android:id="@+id/backBtnMain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:fontFamily=""
+                android:src="@drawable/ic_home"
+                android:textSize="20sp" />
+
 
         </RelativeLayout>
 

@@ -11,12 +11,14 @@ import java.util.HashMap;
 
 import project.bc.nu.projects.calendar.ManagerCalendar;
 
+import static project.bc.nu.projects.manager.AddActivityManager.db;
+
 public class myDBClass extends SQLiteOpenHelper {
 
     // Database Version
     private static final int DATABASE_VERSION = 1;
     // Database Name
-    private static final String DATABASE_NAME = "database10.db";
+    private static final String DATABASE_NAME = "database.db";
     // Table Name
     public static final String TABLE_VEGDIS = "vegetabledisease";
 
@@ -56,6 +58,7 @@ public class myDBClass extends SQLiteOpenHelper {
                 "veg_type TEXT," +
                 "veg_gallery_name TEXT," +
                 "veg_gallery_path TEXT);");
+
 
     }
 

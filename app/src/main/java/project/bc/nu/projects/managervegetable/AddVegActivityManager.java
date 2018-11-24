@@ -24,13 +24,13 @@ public class AddVegActivityManager extends AppCompatActivity {
     EditText tVegPlant;
     EditText tVegTreatment;
     EditText tNameImageVeg;
-    public static MyDB myDB;
+    public static myDBClass myDB;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manager_add_veg);
-        final MyDB myDb = new MyDB(this);
+        final myDBClass myDb = new myDBClass(this);
 /*
 
         myDb.InsertDataVeg("กะหล่ำดอก","Cauliflower","Brassica oleracea L. var. botrytis L. Cruciferae ","ลำต้นเป็นพืชล้มลุก อยู่เป็นช่อ \nใบเป็นใบเดี่ยว มีลักษณะรูปไข่ \nดอกเป็นดอกเดี่ยว มีดอกขนาดเล็กๆ\n","1. ช่วยแก้อาการปวดศีรษะชนิดเรื้อรัง  \n" +
@@ -509,7 +509,7 @@ public class AddVegActivityManager extends AppCompatActivity {
 
 
         // new Class DB
-        final MyDB myDb = new MyDB(this);
+        final myDBClass myDb = new myDBClass(this);
 
 
         // Save Data

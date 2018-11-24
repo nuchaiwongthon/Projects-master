@@ -27,7 +27,16 @@ public class ResultVinitActivity extends AppCompatActivity {
         ShowData(strVegdisID);
 
 
-
+        final ImageView main = (ImageView) findViewById(R.id.backBtnMain);
+        main.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(ResultVinitActivity.this, VinitMainActivity.class);
+                // set the new task and clear flags
+                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(i);
+            }
+        });
         final ImageView cancel = (ImageView) findViewById(R.id.backBtnResult);
         cancel.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
