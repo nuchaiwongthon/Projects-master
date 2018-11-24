@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="project.bc.nu.projects">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_app_new"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_app_new_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <receiver  android:process=":remote" android:name=".calendar.AlarmReceiver"></receiver>
+        <activity
+            android:name=".splash.SplashScreenApp"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".splash.SplashScreenGenQR"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".qrcode.ResultScanQRActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".splash.SplashScreenVinit"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".qrcode.QRCodeMainActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".vinit.VinitMainActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".vinit.SelectTypeVegdisease"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".vinit.SelectTypeVegdisease2"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".vinit.SelectTypeVegdisease3"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".vinit.SelectTypeVegdisease4"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".vinit.SelectTypeVegdisease5"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".vinit.SelectTypeVegdisease6"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".vinit.SelectSyndrome"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".vinit.SelectSyndrome2"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".vinit.SelectSyndrome3"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".vinit.SelectSyndrome4"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".vinit.SelectSyndrome5"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".vinit.SelectSyndrome6"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".vinit.SelectSyndrome7"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".vinit.SelectSyndrome8"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".vinit.SelectSyndrome9"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".vinit.SelectSyndrome10"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".vinit.SelectSyndrome11"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".vinit.SelectSyndrome12"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".vinit.SelectSyndrome13"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+
+
+        <activity
+            android:name=".vinit.ResultVinitActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".splash.SplashScreenManager"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".MainActivityManager"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".manager.VegDiseaseActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".manager.AddActivityManager"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".manager.ListShowActivityManager"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".manager.ListUpdateActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".manager.UpdateActivityManager"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".manager.ListDeleteActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".managervegetable.VegetableActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".managervegetable.AddVegActivityManager"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".managervegetable.ListDeleteVegActivityManager"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".managervegetable.ListShowVegActivityManager"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".managervegetable.ListUpdateVegActivityManager"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".managervegetable.UpdateVegActivityManager"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".splash.SplashScreenCalendar"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".calendar.CalendarMainActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".calendar.ManagerCalendar"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name=".qrcode.VegetableMain"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,62 @@
+<resources>
+
+    <string name="app_name">GardenCare</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main" />
+    <string name="exit">ออก</string>
+    />
+    <string name="exit_message">คุณต้องการจะปิดแอพพลิเคชั่นหรือไม่ ? </string>
+    <string name="exit_message2">คุณต้องการจะปิดหรือไม่ ? </string>
+
+    <string-array name="CmdMenu">
+        <item>ลบ</item>
+    </string-array>
+
+
+    <string name="card_time_title"></string>
+    <string name="card_time_text"></string>
+    <string name="card_time_indicator"></string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">GardenCare</string>
+    <string name="nav_header_subtitle">gardencare@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="hint_resource">table ...</string>
+
+    <string-array name="database_array">
+        <item>ข้อมูลผักสวนครัว</item>
+        <item>ข้อมูลโรคผักสวนครัว</item>
+    </string-array>
+
+    <string-array name="veg">
+        <item>กะหล่ำดอก</item>
+        <item>บวบเหลี่ยม</item>
+        <item>มะเขือเทศ</item>
+        <item>คะน้าฮ้องกง</item>
+        <item>กระเทียม</item>
+    </string-array>
+
+
+    <string name="action_update">แก้ไขข้อมูล</string>
+    <string name="action_delete">ลบข้อมูล</string>
+    <string name="title_activity_veg_disease">VegDiseaseActivity</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="veg_type_array">
+        <item>ส่วนดอก</item>
+        <item>ส่วนฝักและผล</item>
+        <item>ส่วนใบและลำต้น</item>
+        <item>ส่วนหัวและราก</item>
+
+    </string-array>
+    <string-array name="veg_">
+        <item>กรุณาเลือก</item>
+    </string-array>
+    <string name="title_activity_vegetable_main">VegetableMain</string>
+    <string name="tab_text_1">ดูข้อมูลผัก</string>
+    <string name="tab_text_2">ดู QR Code ผัก</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+
+</resources>

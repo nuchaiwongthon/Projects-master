@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_main"
+    tools:context=".manager.UpdateActivityManager">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.NoActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp">
+
+
+            <ImageView
+                android:id="@+id/backBtnE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:fontFamily=""
+                android:src="@drawable/ic_action_back"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/prompt_light"
+                android:text="แก้ไขข้อมูล"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/SaveBtnEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/ic_action_save"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/kanit_light"
+                        android:text="รหัส : "
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/editID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginRight="200dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/kanit_extralight"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/col2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/kanit_light"
+                        android:text="ชื่อโรค : "
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16dp"
+
+                        />
+
+                    <EditText
+                        android:id="@+id/editName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_text"
+                        android:fontFamily="@font/kanit_extralight"
+                        android:padding="2dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16dp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/col3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/kanit_light"
+                        android:text="ส่วนที่ติดโรค : "
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16dp"
+
+                        />
+
+                    <EditText
+                        android:id="@+id/editArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="110dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_text"
+                        android:fontFamily="@font/kanit_extralight"
+                        android:padding="2dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/kanit_light"
+                        android:text="ชนิดที่ติดโรค : "
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/editType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="110dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_text"
+                        android:fontFamily="@font/kanit_extralight"
+                        android:padding="2dp"
+                        android:textSize="16sp" />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/edit4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/kanit_light"
+                        android:text="สาเหตุของโรค : "
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/editCause"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_text"
+                        android:fontFamily="@font/kanit_extralight"
+                        android:padding="2dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/edit5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/kanit_light"
+                        android:text="อาการของโรค 1 : "
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/editSyndrome1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="35dp"
+                        android:background="@drawable/background_text"
+                        android:fontFamily="@font/kanit_extralight"
+                        android:gravity="top"
+                        android:padding="2dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/kanit_light"
+                        android:text="อาการของโรค 2 : "
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/editSyndrome2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="35dp"
+                        android:background="@drawable/background_text"
+                        android:fontFamily="@font/kanit_extralight"
+                        android:gravity="top"
+                        android:padding="2dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/kanit_light"
+                        android:text="วิธีป้องกัน : "
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/editProtect"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="35dp"
+                        android:background="@drawable/background_text"
+                        android:fontFamily="@font/kanit_extralight"
+                        android:gravity="top"
+                        android:minLines="3"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16dp" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/edit6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/kanit_light"
+                        android:text="วิธีกำจัด : "
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/editRemedy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="35dp"
+                        android:background="@drawable/background_text"
+                        android:fontFamily="@font/kanit_extralight"
+                        android:gravity="top"
+                        android:minLines="3"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>
