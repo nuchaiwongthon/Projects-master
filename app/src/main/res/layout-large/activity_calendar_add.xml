@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".calendar.CalendarMainActivity"
+
+
+    >
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.NoActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp">
+
+            <ImageView
+                android:id="@+id/backBtnC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/ic_action_back"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+
+        </RelativeLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/kanit_light"
+                    android:text="เลือกผัก :"
+                    android:textColor="#000000"
+                    android:textSize="24dp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bg_spinner">
+
+                    <Spinner
+                        android:id="@+id/sp_Calendar"
+                        android:layout_width="350dp"
+                        android:layout_height="70dp"
+                        android:padding="6dp"
+                        android:prompt="@string/hint_resource"
+                        android:spinnerMode="dropdown">
+
+
+                    </Spinner>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/kanit_light"
+                    android:text="เลือกวันที่ปลูก :"
+                    android:textColor="#000000"
+                    android:textSize="24dp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bg_spinner">
+
+                    <TextView
+                        android:id="@+id/PlantDate"
+                        android:layout_width="350dp"
+                        android:layout_height="70dp"
+                        android:fontFamily="@font/kanit_extralight"
+                        android:gravity="center"
+                        android:hint="dd/mm/yy"
+                        android:padding="5dp"
+                        android:text=""
+                        android:textSize="22dp">
+
+
+                    </TextView>
+                </RelativeLayout>
+                <Button
+                    android:id="@+id/btnCalender"
+                    android:layout_width="220dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="100dp"
+                    android:background="@drawable/shape_buttonadd"
+                    android:fontFamily="@font/kanit_light"
+                    android:text="ถัดไป"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24dp"
+                    />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

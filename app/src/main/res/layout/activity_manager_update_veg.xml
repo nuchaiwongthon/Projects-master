@@ -36,7 +36,7 @@
                 android:text="แก้ไขข้อมูล"
                 android:textAppearance="@style/TextAppearance.AppCompat"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
             <ImageView
                 android:id="@+id/SaveBtnEdit"
@@ -91,7 +91,7 @@
                         android:id="@+id/editVegID"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="55dp"
+                        android:layout_marginLeft="57dp"
                         android:layout_marginRight="150dp"
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/kanit_extralight"
@@ -179,7 +179,7 @@
                         android:id="@+id/editType"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="80dp"
+                        android:layout_marginLeft="85dp"
                         android:layout_marginRight="15dp"
                         android:layout_marginTop="10dp"
                         android:background="@drawable/background_text"
@@ -210,7 +210,7 @@
                         android:id="@+id/editNameTH"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="70dp"
+                        android:layout_marginLeft="75dp"
                         android:layout_marginRight="15dp"
                         android:layout_marginTop="10dp"
                         android:background="@drawable/background_text"

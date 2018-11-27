@@ -42,7 +42,9 @@ public class SelectSyndrome2 extends AppCompatActivity {
                 // set the new task and clear flags
                 i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(i);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 finish();
+
             }
         });
 
@@ -51,6 +53,7 @@ public class SelectSyndrome2 extends AppCompatActivity {
             public void onClick(View v) {
 
                 SelectSyndrome2.this.finish();
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 
             }
         });
@@ -110,8 +113,10 @@ public class SelectSyndrome2 extends AppCompatActivity {
         });
         final CheckBox btn1 = (CheckBox) findViewById(R.id.Cbtn21);
         final CheckBox btn2 = (CheckBox) findViewById(R.id.Cbtn22);
-        btn1.setTypeface(ResourcesCompat.getFont(context, R.font.kanit_extralight));
-        btn2.setTypeface(ResourcesCompat.getFont(context, R.font.kanit_extralight));
+
+        // turn off API = 19
+        //btn1.setTypeface(ResourcesCompat.getFont(context, R.font.kanit_extralight));
+       // btn2.setTypeface(ResourcesCompat.getFont(context, R.font.kanit_extralight));
         AS.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -126,14 +131,14 @@ public class SelectSyndrome2 extends AppCompatActivity {
                     Intent newActivity = new Intent(SelectSyndrome2.this, SelectSyndrome7.class);
                     newActivity.putExtra("strVegdisID", strVegdisID);
                     startActivity(newActivity);
-
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 
                 } else if (btn2.isChecked()) {
                     String strVegdisID = "5";
                     Intent newActivity = new Intent(SelectSyndrome2.this, SelectSyndrome9.class);
                     newActivity.putExtra("strVegdisID", strVegdisID);
                     startActivity(newActivity);
-
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 }
 
                 btn1.setChecked(false);
@@ -163,5 +168,12 @@ public class SelectSyndrome2 extends AppCompatActivity {
             }
 
         }
+    }
+    @Override
+    public void onBackPressed() {
+
+        super.onBackPressed();
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+
     }
 }

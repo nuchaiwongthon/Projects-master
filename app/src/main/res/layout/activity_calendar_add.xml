@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".calendar.CalendarMainActivity"
-    android:background="@drawable/background_main"
+
+
     >
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -64,8 +65,7 @@
                     <Spinner
                         android:id="@+id/sp_Calendar"
                         android:layout_width="250dp"
-                        android:layout_height="40dp"
-                        android:entries="@array/veg_"
+                        android:layout_height="47dp"
                         android:padding="6dp"
                         android:prompt="@string/hint_resource"
                         android:spinnerMode="dropdown">
@@ -93,7 +93,7 @@
                     <TextView
                         android:id="@+id/PlantDate"
                         android:layout_width="250dp"
-                        android:layout_height="40dp"
+                        android:layout_height="47dp"
                         android:fontFamily="@font/kanit_extralight"
                         android:gravity="center"
                         android:hint="dd/mm/yy"

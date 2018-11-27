@@ -29,9 +29,9 @@
             android:textColor="#FFFFFF"/>
         <ProgressBar
             android:id="@+id/progressBar1"
-            style="@android:style/Widget.ProgressBar.Large.Inverse"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            style="@android:style/Widget.Holo.Light.ProgressBar.Small.Inverse"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginTop="100dp"
             android:indeterminate="false" />
     </LinearLayout>

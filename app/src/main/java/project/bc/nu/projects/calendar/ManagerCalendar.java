@@ -46,9 +46,10 @@ public class ManagerCalendar extends AppCompatActivity implements NavigationView
             @Override
             public void onClick(View view) {
                 Intent newActivity = new Intent(ManagerCalendar.this, CalendarMainActivity.class);
+
                 startActivity(newActivity);
-                newActivity.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                finish();
+                overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+
             }
         });
 
@@ -84,23 +85,15 @@ public class ManagerCalendar extends AppCompatActivity implements NavigationView
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
             return;
-        } if (doubleBackToExitPressedOnce) {
+        }
             super.onBackPressed();
+            overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
 
-            return;
         }
 
-        this.doubleBackToExitPressedOnce = true;
-        Toast.makeText(getApplicationContext(), "กดอีกครั้งเพื่อออก", Toast.LENGTH_SHORT).show();
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                doubleBackToExitPressedOnce = false;
 
-            }
-        }, 2000);
 
-    }
+
 
 
 
@@ -115,16 +108,19 @@ public class ManagerCalendar extends AppCompatActivity implements NavigationView
                 Intent h = new Intent(ManagerCalendar.this, MainActivity.class);
                 h.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(h);
+                overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
                 break;
             case R.id.nav_gen:
                 Intent i = new Intent(ManagerCalendar.this, SplashScreenGenQR.class);
                 i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(i);
+                overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
                 break;
             case R.id.nav_vinit:
                 Intent v = new Intent(ManagerCalendar.this, SplashScreenVinit.class);
                 v.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(v);
+                overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
                 break;
             case R.id.nav_calendar:
                 break;
@@ -132,6 +128,7 @@ public class ManagerCalendar extends AppCompatActivity implements NavigationView
                 Intent m = new Intent(ManagerCalendar.this, SplashScreenManager.class);
                 m.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(m);
+                overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
                 break;
 
         }

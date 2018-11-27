@@ -32,6 +32,7 @@ public class SelectTypeVegdisease2 extends AppCompatActivity {
             public void onClick(View v) {
 
                 SelectTypeVegdisease2.this.finish();
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
         });
 
@@ -48,7 +49,8 @@ public class SelectTypeVegdisease2 extends AppCompatActivity {
                 Intent newActivity = new Intent(SelectTypeVegdisease2.this, SelectSyndrome10.class);
                 newActivity.putExtra("strVegdisID", strVegdisID);
                 startActivity(newActivity);
-                finish();
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+
             }
         });
         btn2.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +62,7 @@ public class SelectTypeVegdisease2 extends AppCompatActivity {
                 Intent newActivity = new Intent(SelectTypeVegdisease2.this, SelectSyndrome.class);
                 newActivity.putExtra("strVegdisID", strVegdisID);
                 startActivity(newActivity);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 
             }
         });
@@ -72,7 +75,7 @@ public class SelectTypeVegdisease2 extends AppCompatActivity {
                 Intent newActivity = new Intent(SelectTypeVegdisease2.this, SelectSyndrome8.class);
                 newActivity.putExtra("strVegdisID", strVegdisID);
                 startActivity(newActivity);
-
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
         });
 
@@ -109,6 +112,13 @@ public class SelectTypeVegdisease2 extends AppCompatActivity {
             }
         }
 
+
+    }
+    @Override
+    public void onBackPressed() {
+
+        super.onBackPressed();
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 
     }
 }

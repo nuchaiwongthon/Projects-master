@@ -57,7 +57,7 @@ public class AlarmReceiver extends BroadcastReceiver {
 
         NotificationCompat.Builder builder =
                 new NotificationCompat.Builder(context)
-                        .setSmallIcon(R.mipmap.ic_app)
+                        .setSmallIcon(R.mipmap.ic_app_new)
                         .setContentTitle(title)
                         .setAutoCancel(true)
                         .setContentText(text);

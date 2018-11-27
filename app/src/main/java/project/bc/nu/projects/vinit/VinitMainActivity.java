@@ -47,7 +47,7 @@ public class VinitMainActivity extends AppCompatActivity
                 Intent newActivity = new Intent(VinitMainActivity.this, SelectTypeVegdisease.class);
                 newActivity.putExtra("strVegdisID", strVegdisID);
                 startActivity(newActivity);
-
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
         });
         //RadioButton 2
@@ -59,6 +59,7 @@ public class VinitMainActivity extends AppCompatActivity
                 Intent newActivity = new Intent(VinitMainActivity.this, SelectTypeVegdisease2.class);
                 newActivity.putExtra("strVegdisID", strVegdisID);
                 startActivity(newActivity);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
         });
         //RadioButton 3
@@ -70,6 +71,7 @@ public class VinitMainActivity extends AppCompatActivity
                 Intent newActivity = new Intent(VinitMainActivity.this, SelectTypeVegdisease3.class);
                 newActivity.putExtra("strVegdisID", strVegdisID);
                 startActivity(newActivity);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
         });
 
@@ -82,6 +84,7 @@ public class VinitMainActivity extends AppCompatActivity
                 Intent newActivity = new Intent(VinitMainActivity.this, SelectTypeVegdisease4.class);
                 newActivity.putExtra("strVegdisID", strVegdisID);
                 startActivity(newActivity);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
         });
         //RadioButton 5
@@ -93,6 +96,7 @@ public class VinitMainActivity extends AppCompatActivity
                 Intent newActivity = new Intent(VinitMainActivity.this, SelectTypeVegdisease5.class);
                 newActivity.putExtra("strVegdisID", strVegdisID);
                 startActivity(newActivity);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
         });
         //RadioButton 6
@@ -104,6 +108,7 @@ public class VinitMainActivity extends AppCompatActivity
                 Intent newActivity = new Intent(VinitMainActivity.this, SelectTypeVegdisease6.class);
                 newActivity.putExtra("strVegdisID", strVegdisID);
                 startActivity(newActivity);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
         });
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -133,21 +138,11 @@ public class VinitMainActivity extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
             return;
-        } if (doubleBackToExitPressedOnce) {
+        }
                 super.onBackPressed();
 
-                return;
-            }
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 
-            this.doubleBackToExitPressedOnce = true;
-            Toast.makeText(getApplicationContext(), "กดอีกครั้งเพื่อออก", Toast.LENGTH_SHORT).show();
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    doubleBackToExitPressedOnce = false;
-
-                }
-            }, 2000);
 
         }
 

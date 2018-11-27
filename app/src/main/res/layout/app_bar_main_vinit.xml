@@ -41,7 +41,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="40dp"
-                    android:text="เลือกชนิดผักที่ต้องการวิเคราะห์"
+                    android:text="เลือกชนิดผักที่ต้องการวิเคราะห์ ?"
                     android:fontFamily="@font/prompt_light"
                     android:textSize="16dp"
                     android:textColor="#000000"/>

@@ -33,7 +33,7 @@
                 android:fontFamily="@font/kanit_light"
                 android:text="จัดการข้อมูลโรคผักสวนครัว"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
         </RelativeLayout>
 

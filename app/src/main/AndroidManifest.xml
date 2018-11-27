@@ -244,10 +244,10 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity
-            android:name=".qrcode.VegetableMain"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:name=".qrcode.ScanQRActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
     </application>
 
 </manifest>

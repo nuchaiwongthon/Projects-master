@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_main"
     tools:context=".MainActivityManager">
 
     <android.support.design.widget.AppBarLayout
@@ -14,7 +13,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="56dp">
+            android:layout_height="52dp">
 
             <ImageView
                 android:id="@+id/backBtnM"
@@ -63,9 +62,8 @@
 
                     <Spinner
                         android:id="@+id/sp_db"
-                        android:layout_width="300dp"
+                        android:layout_width="270dp"
                         android:layout_height="50dp"
-                        android:entries="@array/database_array"
                         android:padding="10dp"
                         android:prompt="@string/hint_resource"
                         android:spinnerMode="dropdown">

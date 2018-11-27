@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".manager.ListUpdateActivity"
-    android:background="@drawable/background_main">
+    >
 
 
     <RelativeLayout
@@ -54,7 +54,7 @@
                 android:fontFamily="@font/kanit_light"
                 android:text="แก้ไขข้อมูล"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textAppearance="@style/TextAppearance.AppCompat"/>
 
         </RelativeLayout>

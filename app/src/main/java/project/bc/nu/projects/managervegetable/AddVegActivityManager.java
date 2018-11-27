@@ -31,7 +31,6 @@ public class AddVegActivityManager extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manager_add_veg);
         final myDBClass myDb = new myDBClass(this);
-/*
 
         myDb.InsertDataVeg("กะหล่ำดอก","Cauliflower","Brassica oleracea L. var. botrytis L. Cruciferae ","ลำต้นเป็นพืชล้มลุก อยู่เป็นช่อ \nใบเป็นใบเดี่ยว มีลักษณะรูปไข่ \nดอกเป็นดอกเดี่ยว มีดอกขนาดเล็กๆ\n","1. ช่วยแก้อาการปวดศีรษะชนิดเรื้อรัง  \n" +
                         "2. ช่วยรักษาโรคหอบหืด\n","\"ระยะปลูก ระยะปลูกระหว่างต้น 50 – 70 เซนติเมตร ระยะระหว่างแถว 100 – 120 เซนติเมตร\n" +
@@ -400,7 +399,7 @@ public class AddVegActivityManager extends AppCompatActivity {
                 "การเตรียมกล้า เตรียมหัวหอมแดงที่สมบูรณ์\n" +
                 "วิธีปลูก ใช้ส่วนโคนจิ้มลงในดินครึ้งหัว ใช้เวลา 7 – 10 วันในการงอก","การใส่ปุ๋ย อายุ 14 วัน หลังปลูก ใส่ปุ๋ยสูตร 46–0-0 หรือ 21–0–0 อัตรา 20–25กิโลกรัมต่อไร่ อายุ 35–40 วัน หลังปลูกใส่ปุ๋ยสูตร 15–15–15 อัตรา 20–25 กิโลลกรัมต่อไร่\n" +
                 "การเก็บเกี่ยว งดให้น้ำ 5 – 7 วัน ก่อนเก็บเกี่ยว อายุเก็บเกี่ยว 65 – 85 วัน สังเกตใบเริ่มเหลือง ถอนหัวออกจากแปลงโดยเก็บหัวที่แห้ง สีแดงเป็นมันใบแห้ง","ส่วนกินหิวและราก","หอมแดง","40.png");
-*/
+
         // btnSave (Save)
         final ImageView save = (ImageView) findViewById(R.id.btnSave);
 

@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
@@ -27,10 +28,8 @@ import me.dm7.barcodescanner.zxing.ZXingScannerView;
 import project.bc.nu.projects.R;
 import project.bc.nu.projects.SQLite.myDBClass;
 
-public class QRCodeMainActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler{
-    ZXingScannerView zXingScannerView;
-    private int MY_REQUEST_CODE = 1;
-    private boolean doubleBackToExitPressedOnce;
+public class QRCodeMainActivity extends AppCompatActivity {
+
     String arrData[][];
     final Context context = this;
 
@@ -38,12 +37,7 @@ public class QRCodeMainActivity extends AppCompatActivity implements ZXingScanne
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_gen_qr);
-        if (checkSelfPermission(Manifest.permission.CAMERA)
-                != PackageManager.PERMISSION_GRANTED) {
 
-            requestPermissions(new String[]{Manifest.permission.CAMERA},
-                    MY_REQUEST_CODE);
-        }
         // get Data from SQLite
         final myDBClass myDb = new myDBClass(this);
 
@@ -67,7 +61,14 @@ public class QRCodeMainActivity extends AppCompatActivity implements ZXingScanne
         });*/
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent newActivity = new Intent(QRCodeMainActivity.this,ScanQRActivity.class);
+                startActivity(newActivity);
+                overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+            }
+        });
         final ListView LView1 = (ListView) findViewById(R.id.listViewGen);
         LView1.setAdapter(new QRCodeMainActivity.ImageAdapter(this, arrData));
 
@@ -139,7 +140,9 @@ public class QRCodeMainActivity extends AppCompatActivity implements ZXingScanne
                 });
 
 
-                imageDialog.create();
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    imageDialog.create();
+                }
                 imageDialog.show();
 
             }
@@ -158,7 +161,7 @@ public class QRCodeMainActivity extends AppCompatActivity implements ZXingScanne
 
         public int getCount() {
             // TODO Auto-generated method stub
-            return 0;
+            return list.length;
         }
 
         public Object getItem(int position) {
@@ -179,13 +182,13 @@ public class QRCodeMainActivity extends AppCompatActivity implements ZXingScanne
 
 
             if (convertView == null) {
-                convertView = inflater.inflate(R.layout.activity_column_veg, null);
+                convertView = inflater.inflate(R.layout.activity_column_qr, null);
             }
-            TextView textID = (TextView) convertView.findViewById(R.id.colVegID);
+            //
             TextView textName = (TextView) convertView.findViewById(R.id.colVegName);
             String strPath = "/mnt/sdcard/project/veg/" + list[position][10].toString();
 
-            textID.setText(list[position][0].toString());
+            //textID.setText(list[position][0].toString());
             textName.setText(list[position][1].toString());
             // Image Resource
             ImageView imageView = (ImageView) convertView.findViewById(R.id.colVegPath);
@@ -196,52 +199,12 @@ public class QRCodeMainActivity extends AppCompatActivity implements ZXingScanne
 
         }
     }
-    public void onBackPressed(){
-        if (doubleBackToExitPressedOnce) {
-            super.onBackPressed();
-
-            return;
-        }
-
-        this.doubleBackToExitPressedOnce = true;
-        Toast.makeText(getApplicationContext(),"กดอีกครั้งเพื่อออก",Toast.LENGTH_SHORT).show();
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                doubleBackToExitPressedOnce = false;
-
-            }
-        }, 2000);
-
-    }
-    public void scan(View view){
-
-        zXingScannerView = new ZXingScannerView(getApplicationContext());
-        setContentView(zXingScannerView);
-        zXingScannerView.setResultHandler(this);
-        zXingScannerView.startCamera();
-    }
     @Override
-    public void onPause() {
-        zXingScannerView.stopCamera();
-        super.onPause();
+    public void onBackPressed() {
 
-    }
-    @Override
-    public void handleResult(Result result) {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 
-        Intent newActivity = new Intent(QRCodeMainActivity.this,ResultScanQRActivity.class);
-        // newActivity.putExtra("VegID", VegID);
-        newActivity.putExtra("VegID", result.getText().toString());
-        startActivity(newActivity);
-        zXingScannerView.resumeCameraPreview(this);
-    }
-
-    @Override
-    public void onRestart() {
-        super.onRestart();
-
-        zXingScannerView.startCamera();
     }
 
 

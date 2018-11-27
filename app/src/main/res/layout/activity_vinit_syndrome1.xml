@@ -4,8 +4,7 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_main"
-    >
+    android:background="@drawable/background_main">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -25,6 +24,7 @@
                 android:src="@drawable/ic_action_back"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -58,77 +58,77 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="30dp"
-                    android:text="เลือกอาการที่ต้องการวิเคราะห์"
                     android:fontFamily="@font/kanit_light"
-                    android:textSize="16dp"
-                    android:textColor="#000000"/>
+                    android:text="เลือกอาการที่ต้องการวิเคราะห์ ?"
+                    android:textColor="#000000"
+                    android:textSize="16dp" />
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+
+                    <CheckBox
+                        android:id="@+id/Cbtn31"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp">
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="15dp"
+                        android:checked="false"
+                        android:fontFamily="@font/kanit_extralight"
+                        android:text=""
+                        android:textSize="16dp" />
+
+                    <Button
+                        android:id="@+id/show31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/Cbtn31"
+                        android:layout_marginLeft="60dp"
+                        android:background="@drawable/shape_buttonadd"
+                        android:fontFamily="@font/kanit_extralight"
+                        android:gravity="center"
+                        android:text="ดูรูปภาพ"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12dp" />
 
 
-                        <CheckBox
-                            android:id="@+id/Cbtn31"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginRight="15dp"
-                            android:textSize="16dp"
-                            android:fontFamily="@font/kanit_extralight"
-                            android:text=""
-                            android:checked="false" />
-                        <Button
-                            android:id="@+id/show31"
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:layout_marginLeft="60dp"
-                            android:layout_below="@+id/Cbtn31"
-                            android:text="ดูรูปภาพ"
-                            android:fontFamily="@font/kanit_extralight"
-                            android:textSize="12dp"
-                            android:gravity="center" />
+                </RelativeLayout>
 
 
-                    </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btnMain"
+                        android:layout_width="140dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/shape_buttonadd"
+                        android:fontFamily="@font/kanit_light"
+                        android:text="หน้าหลัก"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16dp" />
+
+                    <Button
+                        android:id="@+id/btnAssert31"
+                        android:layout_width="140dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/shape_buttonadd"
+                        android:fontFamily="@font/kanit_light"
+                        android:text="ถัดไป"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16dp" />
+                </RelativeLayout>
 
 
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                       >
-
-                        <Button
-                            android:id="@+id/btnMain"
-                            android:layout_width="140dp"
-                            android:layout_height="40dp"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="20dp"
-                            android:background="@drawable/shape_buttonadd"
-                            android:fontFamily="@font/kanit_light"
-                            android:text="หน้าหลัก"
-                            android:textColor="#FFFFFF"
-                            android:textSize="16dp"
-                            />
-                        <Button
-                            android:id="@+id/btnAssert31"
-                            android:layout_width="140dp"
-                            android:layout_height="40dp"
-                            android:layout_marginTop="20dp"
-                            android:layout_marginRight="30dp"
-                            android:layout_alignParentRight="true"
-                            android:background="@drawable/shape_buttonadd"
-                            android:fontFamily="@font/kanit_light"
-                            android:text="ถัดไป"
-                            android:textColor="#FFFFFF"
-                            android:textSize="16dp"
-                            />
-                    </RelativeLayout>
-
-
-           </LinearLayout>
+            </LinearLayout>
 
         </RelativeLayout>
     </ScrollView>

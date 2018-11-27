@@ -35,6 +35,7 @@ public class ResultVinitActivity extends AppCompatActivity {
                 // set the new task and clear flags
                 i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(i);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
         });
         final ImageView cancel = (ImageView) findViewById(R.id.backBtnResult);
@@ -42,9 +43,11 @@ public class ResultVinitActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 ResultVinitActivity.this.finish();
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
         });
     }
+
         public void ShowData(String strVegdisID)
         {
 
@@ -74,6 +77,13 @@ public class ResultVinitActivity extends AppCompatActivity {
             }
 
         }
+    @Override
+    public void onBackPressed() {
+
+        super.onBackPressed();
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+
+    }
 
     }
 

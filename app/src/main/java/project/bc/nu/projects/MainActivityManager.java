@@ -35,6 +35,7 @@ public class MainActivityManager extends AppCompatActivity {
             public void onClick(View v) {
                 // Open Form Main
                 MainActivityManager.this.finish();
+                overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
             }
         });
 
@@ -95,8 +96,10 @@ public class MainActivityManager extends AppCompatActivity {
                         Toast.LENGTH_SHORT).show();
                 if (spin.getSelectedItem().toString().equals("ข้อมูลผักสวนครัว")) {
                     startActivity(new Intent(MainActivityManager.this, VegetableActivity.class));
+                    overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
                 } else if (spin.getSelectedItem().toString().equals("ข้อมูลโรคผักสวนครัว")){
                     startActivity(new Intent(MainActivityManager.this, VegDiseaseActivity.class));
+                    overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
                 }
             }
         });

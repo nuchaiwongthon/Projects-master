@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_green"
+    tools:context=".splash.SplashScreenVinit">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:id="@+id/splashVn"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@drawable/icon_vinit"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/splashVn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40dp"
+            android:layout_marginTop="20dp"
+            android:text="วิเคราะห์โรคพืช"
+            android:fontFamily="@font/kanit_light"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"/>
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="@android:style/Widget.Holo.Light.ProgressBar.Inverse"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="100dp"
+            android:indeterminate="false" />
+    </LinearLayout>
+</RelativeLayout>

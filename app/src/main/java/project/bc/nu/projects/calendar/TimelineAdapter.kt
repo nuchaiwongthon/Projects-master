@@ -86,7 +86,7 @@ class TimelineAdapter(val data :ArrayList<MyDB.Timeline>) : RecyclerView.Adapter
 
     private fun convertDateToString(day: Int, month: Int, year: Int): String {
         return "" + day + " " +
-                convertMonth_intToName(month+1) + " " +(year)
+                convertMonth_intToName(month + 1) + " " +(year)
     }
 
     private fun convertMonth_intToName(month: Int): String {

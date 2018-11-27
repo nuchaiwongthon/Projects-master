@@ -32,6 +32,7 @@ public  class ResultScanQRActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                ResultScanQRActivity.this.finish();
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
         });
 
@@ -67,6 +68,13 @@ public  class ResultScanQRActivity extends AppCompatActivity {
             Bitmap bm = BitmapFactory.decodeFile(strPath);
             tVegImage.setImageBitmap(bm);
         }
+
+    }
+    @Override
+    public void onBackPressed() {
+
+        super.onBackPressed();
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 
     }
 

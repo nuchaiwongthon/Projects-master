@@ -29,6 +29,7 @@ public class SplashScreenManager extends AppCompatActivity {
             public void run() {
                 Intent intent = new Intent(SplashScreenManager.this,MainActivityManager.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
                 finish();
             }
         };
@@ -36,7 +37,7 @@ public class SplashScreenManager extends AppCompatActivity {
 
     public void onResume() {
         super.onResume();
-        handler.postDelayed(runnable, 2000);
+        handler.postDelayed(runnable, 1200);
         time = System.currentTimeMillis();
     }
 
@@ -60,6 +61,6 @@ public class SplashScreenManager extends AppCompatActivity {
                 doubleBackToExitPressedOnce = false;
 
             }
-        }, 2000);
+        }, 1200);
     }
 }

@@ -18,11 +18,15 @@ public class myDBClass extends SQLiteOpenHelper {
     // Database Version
     private static final int DATABASE_VERSION = 1;
     // Database Name
-    private static final String DATABASE_NAME = "database.db";
+    private static final String DATABASE_NAME = "database1.db";
     // Table Name
     public static final String TABLE_VEGDIS = "vegetabledisease";
 
     public static final String TABLE_VEG = "vegetable";
+
+    public static final String TABLE_NAME = "resource";
+    public static final String TABLE_TIMELINE = "timeline_date";
+    public static final String TABLE_DATE_START = "timeline_date_start";
 
 
     public myDBClass(Context context) {
@@ -59,9 +63,83 @@ public class myDBClass extends SQLiteOpenHelper {
                 "veg_gallery_name TEXT," +
                 "veg_gallery_path TEXT);");
 
+        db.execSQL("CREATE TABLE TABLE_NAME (_id INTEGER PRIMARY KEY AUTOINCREMENT, ID INTEGER,TYPE TEXT,NAME TEXT)");
+        db.execSQL("CREATE TABLE TABLE_TIMELINE (_id INTEGER PRIMARY KEY AUTOINCREMENT, ID INTEGER,NAME,DATE_START INTEGER,OBJECTIVE TEXT)");
+
+        db.execSQL("CREATE TABLE TABLE_DATE_START (_id INTEGER PRIMARY KEY AUTOINCREMENT, ID INTEGER,NAME TEXT,YEAR INTEGER,MONTH INTEGER,DAY INTEGER,PASS INTEGER)");
+        init(db);
 
     }
 
+    public void init(SQLiteDatabase db) {
+
+        this.insertTable(1, "ผักกินดอก", "กะหล่ำดอก");
+        this.insertTable(7, "ผักกินฝักและผล", "บวบเหลี่ยม");
+        this.insertTable(12, "ผักกินฝักและผล", "มะเขือเทศ");
+        this.insertTable(20, "ผักกินใบและลำต้น", "คะน้าฮ้องกง");
+        this.insertTable(38, "กินหัวและกินราก", "กระเทียม");
+/*
+        // this.insertTimeline(1,"กะหล่ำดอก", 0, "เริ่มปลูก กะหล่ำดอก")
+        this.insertTimeline(1,"กะหล่ำดอก", 0, "ใส่ปุ๋ยครั่งที่ 1 " + "สูตร 46-0-0 อัตรา 30 กก./ไร่");
+        this.insertTimeline(1,"กะหล่ำดอก", 2, "ใส่ปุ๋ยครั่งที่ 2 " + "สูตร 15-15-15 อัตรา 50 กก./ไร่");
+        this.insertTimeline(1,"กะหล่ำดอก", 3, "ใส่ปุ๋ยครั่งที่ 3 "+"สูตร 13-13-21 หรือ 14-14-21 อัตรา 50 กก./ไร่");
+        this.insertTimeline(1,"กะหล่ำดอก", 10, "เริ่มเก็บเกี่ยว กะหล่ำดอก");
+
+        //  this.insertTimeline(7,"บวบเหลี่ยม", 0, "เริ่มปลูก บวบเหลี่ยม")
+        this.insertTimeline(7,"บวบเหลี่ยม", 0, "ใส่ปุ๋ยครั่งที่ 1 " + "สูตร 46-0-0 อัตรา 30 กก./ไร่");
+        this.insertTimeline(7,"บวบเหลี่ยม", 20, "ใส่ปุ๋ยครั่งที่ 2 " + "สูตร 15-15-15 หรือ 16-16-16 อัตรา 40 กก./ไร่");
+        this.insertTimeline(7,"บวบเหลี่ยม", 30, "ใส่ปุ๋ยครั่งที่ 3 " + "สูตร 13-13-21 อัตรา 30-50 กก./ไร่");
+        this.insertTimeline(7,"บวบเหลี่ยม", 40, "เริ่มเก็บเกี่ยว บวบเหลี่ยม")
+
+        //  this.insertTimeline(12,"มะเขือเทศ", 0, "เริ่มปลูก มะเขือเทศ")
+        this.insertTimeline(12,"มะเขือเทศ", 0, "ใส่ปุ๋ยครั่งที่ 1 " + "สูตร 13-13-21 อัตรา 100 กก./ไร่");
+        this.insertTimeline(12,"มะเขือเทศ", 52, "ใส่ปุ๋ยครั่งที่ 2 " + "สูตร 13-13-21");
+        this.insertTimeline(12,"มะเขือเทศ", 57, "ใส่ปุ๋ยครั่งที่ 3 " + "สูตร 13-13-21");
+        this.insertTimeline(12,"มะเขือเทศ", 70, "เริ่มเก็บเกี่ยว มะเขือเทศ");
+
+        //   this.insertTimeline(20,"คะน้าฮ้องกง", 0, "เริ่มปลูก คะน้าฮ้องกง")
+        this.insertTimeline(20,"คะน้าฮ้องกง", 0, "ใส่ปุ๋ยครั่งที่ 1 " + "สูตร 46–0–0 หรือ 21–0–0 อัตรา 120 กก./ไร่");
+        this.insertTimeline(20,"คะน้าฮ้องกง", 14, "ใส่ปุ๋ยครั่งที่ 2 " + "สูตร 21–0–0 ผสมปุ๋ยสูตร 15–15–15 อัตรา 2:1 120 กก./ไร่");
+        this.insertTimeline(20,"คะน้าฮ้องกง", 35, "เริ่มเก็บเกี่ยว คะน้าฮ้องกง");
+
+        // this.insertTimeline(38,"กระเทียม", 0, "เริ่มปลูก กระเทียม")
+        this.insertTimeline(38,"กระเทียม", 0, "ใส่ปุ๋ยครั่งที่ 1 " + "สูตร 46–0–0 หรือ 21–0–0 อัตรา 120 กก./ไร่");
+        this.insertTimeline(38,"กระเทียม", 90, "เริ่มเก็บเกี่ยว กระเทียม");*/
+        ContentValues Val = new ContentValues();
+
+        Val.put("ID", 0);
+        Val.put("YEAR", 0);
+        Val.put("MONTH", 0);
+        Val.put("DAY", 0);
+        Val.put("PASS",0);
+
+
+        db.insert(TABLE_DATE_START, null, Val);
+
+
+    }
+
+
+    public long insertTable(int id,String type,String name) {
+        //this.execSQL("INSERT INTO ${TimelineSQ.resourceTableName} ($ID,$TYPE,$NAME) VALUES ($id,$type,$name)")
+        try {
+            SQLiteDatabase db;
+            db = this.getWritableDatabase(); // Write Data
+
+            ContentValues Val = new ContentValues();
+            Val.put("ID", id);
+            Val.put("TYPE", type);
+            Val.put("NAME", name);
+
+            long rows = db.insert(TABLE_VEGDIS, null, Val);
+
+            db.close();
+            return rows; // return rows inserted.
+        }catch (Exception e) {
+            return -1;
+        }
+
+        }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 

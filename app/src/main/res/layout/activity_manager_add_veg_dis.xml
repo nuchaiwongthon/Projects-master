@@ -24,7 +24,7 @@
                 android:layout_marginLeft="15dp"
                 android:src="@drawable/ic_action_back"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp" />
+                />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -34,7 +34,7 @@
                 android:text="เพิ่มข้อมูล"
                 android:textAppearance="@style/TextAppearance.AppCompat"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
             <ImageView
                 android:id="@+id/btnSave"

@@ -9,7 +9,7 @@ android {
     }
     defaultConfig {
         applicationId "project.bc.nu.projects"
-        minSdkVersion 23
+        minSdkVersion 19
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
@@ -47,7 +47,7 @@ dependencies {
     implementation 'com.nex3z:notification-badge:0.3.0'
 
 
-
+    implementation 'com.github.vipulasri:timelineview:1.0.6'
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }

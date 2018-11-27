@@ -34,7 +34,7 @@
                 android:text="เพิ่มข้อมูล"
                 android:textAppearance="@style/TextAppearance.AppCompat"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
             <ImageView
                 android:id="@+id/btnSave"

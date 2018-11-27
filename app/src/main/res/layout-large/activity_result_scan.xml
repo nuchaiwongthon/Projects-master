@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".qrcode.ResultScanQRActivity"
+   >
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.NoActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp">
+
+
+            <ImageView
+                android:id="@+id/backBtnResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/ic_action_back"
+                android:textColor="#FFFFFF"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/kanit_light"
+                android:text="เรียกดูข้อมูลผัก"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="#FFFFFF"
+                android:textSize="26sp" />
+
+        </RelativeLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/ResultNameTH"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/kanit_light"
+                        android:padding="2dp"
+                        android:gravity="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="26dp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp">
+
+                    <ImageView
+                        android:id="@+id/ResultImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:layout_centerInParent="true" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/kanit_light"
+                        android:text="ชื่อสามัญ : "
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="24dp" />
+
+                    <TextView
+                        android:id="@+id/ResultNameCM"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/kanit_extralight"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="24dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/kanit_light"
+                        android:text="ชื่อวิทยาศาสตร์ : "
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="24dp" />
+
+                    <TextView
+                        android:id="@+id/ResultNameSC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="175dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/kanit_extralight"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="24dp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/kanit_light"
+                        android:text="ลักษณะ : "
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="24dp"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/ResultStructure"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="105dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/kanit_extralight"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="24dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="15dp"
+                            android:fontFamily="@font/kanit_light"
+                            android:text="คุณค่าทางอาหาร : "
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textSize="24dp"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/ResultNutrient"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:fontFamily="@font/kanit_extralight"
+                            android:gravity="top"
+                            android:minLines="2"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textSize="24dp" />
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="15dp"
+                            android:fontFamily="@font/kanit_light"
+                            android:text="วิธีการปลูก : "
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textSize="24dp"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/ResultPlant"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:fontFamily="@font/kanit_extralight"
+                            android:gravity="top"
+                            android:minLines="3"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textSize="24dp" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="15dp"
+                            android:fontFamily="@font/kanit_light"
+                            android:text="วิธีการดูแลรักษา : "
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textSize="24dp"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/ResultTreatment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:fontFamily="@font/kanit_extralight"
+                            android:gravity="top"
+                            android:padding="2dp"
+                            android:minLines="5"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textSize="24dp" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

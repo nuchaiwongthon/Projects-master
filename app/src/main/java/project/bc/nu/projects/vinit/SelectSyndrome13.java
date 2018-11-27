@@ -3,6 +3,7 @@ package project.bc.nu.projects.vinit;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -55,7 +56,9 @@ public class SelectSyndrome13 extends AppCompatActivity {
                 });
 
 
-                imageDialog.create();
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    imageDialog.create();
+                }
                 imageDialog.show();
 
             }
@@ -65,7 +68,7 @@ public class SelectSyndrome13 extends AppCompatActivity {
             public void onClick(View v) {
 
                 SelectSyndrome13.this.finish();
-
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
         });
         final Button main = (Button) findViewById(R.id.btnMain);
@@ -76,11 +79,14 @@ public class SelectSyndrome13 extends AppCompatActivity {
                 // set the new task and clear flags
                 i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(i);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 finish();
             }
         });
         final CheckBox btn1 = (CheckBox) findViewById(R.id.Cbtn31);
-        btn1.setTypeface(ResourcesCompat.getFont(context, R.font.kanit_extralight));
+
+        // turn off API = 19
+       // btn1.setTypeface(ResourcesCompat.getFont(context, R.font.kanit_extralight));
 
         AS.setOnClickListener(new View.OnClickListener() {
 
@@ -94,10 +100,10 @@ public class SelectSyndrome13 extends AppCompatActivity {
                     Intent newActivity = new Intent(SelectSyndrome13.this, SelectSyndrome7.class);
                     newActivity.putExtra("strVegdisID", strVegdisID);
                     startActivity(newActivity);
-                    btn1.setChecked(false);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 
                 }
-
+                btn1.setChecked(false);
 
             }
 
@@ -116,5 +122,12 @@ public class SelectSyndrome13 extends AppCompatActivity {
             btn1.setText(arrData[5]);
 
         }
+    }
+    @Override
+    public void onBackPressed() {
+
+        super.onBackPressed();
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+
     }
 }

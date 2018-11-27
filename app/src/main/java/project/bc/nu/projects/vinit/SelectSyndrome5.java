@@ -3,6 +3,7 @@ package project.bc.nu.projects.vinit;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -58,7 +59,9 @@ public class SelectSyndrome5 extends AppCompatActivity {
                 });
 
 
-                imageDialog.create();
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    imageDialog.create();
+                }
                 imageDialog.show();
 
             }
@@ -85,7 +88,9 @@ public class SelectSyndrome5 extends AppCompatActivity {
                 });
 
 
-                imageDialog.create();
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    imageDialog.create();
+                }
                 imageDialog.show();
 
             }
@@ -100,6 +105,7 @@ public class SelectSyndrome5 extends AppCompatActivity {
                 // set the new task and clear flags
                 i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(i);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 finish();
             }
         });
@@ -107,13 +113,15 @@ public class SelectSyndrome5 extends AppCompatActivity {
             public void onClick(View v) {
 
                 SelectSyndrome5.this.finish();
-
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
         });
         final CheckBox btn1 = (CheckBox) findViewById(R.id.Cbtn21);
         final CheckBox btn2 = (CheckBox) findViewById(R.id.Cbtn22);
-        btn1.setTypeface(ResourcesCompat.getFont(context, R.font.kanit_extralight));
-        btn2.setTypeface(ResourcesCompat.getFont(context, R.font.kanit_extralight));
+
+        // turn off API = 19
+        // btn1.setTypeface(ResourcesCompat.getFont(context, R.font.kanit_extralight));
+        // btn2.setTypeface(ResourcesCompat.getFont(context, R.font.kanit_extralight));
         AS.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -122,25 +130,25 @@ public class SelectSyndrome5 extends AppCompatActivity {
                 if (btn1.isChecked() && btn2.isChecked()) {
                     Toast.makeText(getApplicationContext(), "เลือกอันใดอันหนึ่ง",
                             Toast.LENGTH_SHORT).show();
-                    btn1.setChecked(false);
-                    btn2.setChecked(false);
+
                 } else if (btn1.isChecked()) {
                     String strVegdisID = "2";
                     Intent newActivity = new Intent(SelectSyndrome5.this, ResultVinitActivity.class);
                     newActivity.putExtra("strVegdisID", strVegdisID);
                     startActivity(newActivity);
-                    btn1.setChecked(false);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 } else if (btn2.isChecked()) {
                     String strVegdisID = "3";
                     Intent newActivity = new Intent(SelectSyndrome5.this, ResultVinitActivity.class);
                     newActivity.putExtra("strVegdisID", strVegdisID);
                     startActivity(newActivity);
-                    btn2.setChecked(false);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 }
-
+                btn1.setChecked(false);
+                btn2.setChecked(false);
                 AS.setSelected(!AS.isSelected());
                 if (AS.isSelected()) {
-
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 }
 
             }
@@ -170,5 +178,12 @@ public class SelectSyndrome5 extends AppCompatActivity {
             }
 
         }
+    }
+    @Override
+    public void onBackPressed() {
+
+        super.onBackPressed();
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+
     }
 }

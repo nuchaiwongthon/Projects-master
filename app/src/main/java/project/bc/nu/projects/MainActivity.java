@@ -1,8 +1,10 @@
 package project.bc.nu.projects;
 
 import android.content.Context;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.MenuItemCompat;
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity
     private int MY_REQUEST_CODE = 99;
     private boolean doubleBackToExitPressedOnce;
     final Context context = this;
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,11 +53,13 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-*/        if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED) {
+*/         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
+                    != PackageManager.PERMISSION_GRANTED) {
 
-            requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
-                    MY_REQUEST_CODE);
+                requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+                        MY_REQUEST_CODE);
+            }
         }
         final ImageView btn_gen = (ImageView) findViewById(R.id.btn_gen);
         // Perform action on click
@@ -64,6 +69,7 @@ public class MainActivity extends AppCompatActivity
                 // Open Generate QR
                 Intent newActivity = new Intent(MainActivity.this, SplashScreenGenQR.class);
                 startActivity(newActivity);
+                overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
 
             }
         });
@@ -76,6 +82,7 @@ public class MainActivity extends AppCompatActivity
                 // Open Vinit
                 Intent newActivity = new Intent(MainActivity.this, SplashScreenVinit.class);
                 startActivity(newActivity);
+                overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
 
             }
         });
@@ -87,6 +94,7 @@ public class MainActivity extends AppCompatActivity
                 // Open Calendar
                 Intent newActivity = new Intent(MainActivity.this, SplashScreenCalendar.class);
                 startActivity(newActivity);
+                overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
 
             }
         });
@@ -98,6 +106,7 @@ public class MainActivity extends AppCompatActivity
                 // Open Manager
                 Intent newActivity = new Intent(MainActivity.this, SplashScreenManager.class);
                 startActivity(newActivity);
+                overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
 
             }
         });
@@ -108,7 +117,7 @@ public class MainActivity extends AppCompatActivity
     public void onBackPressed() {
       if (doubleBackToExitPressedOnce) {
             super.onBackPressed();
-
+          overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
             return;
         }
 
@@ -208,6 +217,7 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_gen:
                 Intent i= new Intent(MainActivity.this,SplashScreenGenQR.class);
                 startActivity(i);
+
                 break;
             case R.id.nav_vinit:
                 Intent s= new Intent(MainActivity.this,SplashScreenVinit.class);

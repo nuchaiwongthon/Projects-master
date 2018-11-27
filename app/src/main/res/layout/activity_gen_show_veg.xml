@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".qrcode.ResultScanQRActivity"
-    android:background="@drawable/background_main">
+    >
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -33,10 +33,10 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:fontFamily="@font/kanit_light"
-                android:text=""
+                android:text="เรียกดูข้อมูลผัก"
                 android:textAppearance="@style/TextAppearance.AppCompat"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
         </RelativeLayout>
 

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".vinit.ResultVinitActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.NoActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp">
+
+
+            <ImageView
+                android:id="@+id/backBtnResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:fontFamily=""
+                android:src="@drawable/ic_action_back"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/kanit_light"
+                android:text="วิเคราะห์โรคพืช"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="#FFFFFF"
+                android:textSize="26sp" />
+
+            <ImageView
+                android:id="@+id/backBtnMain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:fontFamily=""
+                android:src="@drawable/ic_home" />
+
+
+        </RelativeLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp">
+
+
+                    <TextView
+                        android:id="@+id/ResultName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/kanit_light"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="26dp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/ResultVegImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="20dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/kanit_light"
+                        android:text="ส่วนที่ติดโรค : "
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="24dp"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/ResultArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="150dp"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/kanit_extralight"
+                        android:padding="2dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="24dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/kanit_light"
+                        android:text="สาเหตุของโรค : "
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="24dp"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/ResultCause"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="165dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/kanit_extralight"
+                        android:padding="2dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="24dp"
+                        android:textStyle="italic" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/kanit_light"
+                        android:text="วิธีป้องกัน : "
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="24dp" />
+
+                    <TextView
+                        android:id="@+id/ResultProtect"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="60dp"
+                        android:fontFamily="@font/kanit_extralight"
+                        android:gravity="top"
+                        android:minLines="1"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="24dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/kanit_light"
+                        android:text="วิธีกำจัด : "
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="24dp" />
+
+                    <TextView
+                        android:id="@+id/ResultRemedy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="60dp"
+                        android:fontFamily="@font/kanit_extralight"
+                        android:gravity="top"
+                        android:minLines="3"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="24dp" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>
