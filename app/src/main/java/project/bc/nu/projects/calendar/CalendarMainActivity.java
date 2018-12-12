@@ -14,6 +14,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.annotation.NonNull;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -34,8 +35,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
+import java.util.jar.Attributes;
 
 import project.bc.nu.projects.R;
 import project.bc.nu.projects.SQLite.MyDB;
@@ -224,6 +227,7 @@ public class CalendarMainActivity extends AppCompatActivity {
 
             }
         });
+       // final ArrayList<String> arrayList = db.getAllVegatable();
 
         String[] veg = new String[]{
                 "กรุณาเลือกผัก",
@@ -298,11 +302,11 @@ public class CalendarMainActivity extends AppCompatActivity {
         mDateSetListener = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-                y = year;
+                y = year +543;
                 m = month + 1;
                 d = day;
                 Log.d(TAG, "onDateSet: mm/dd/yyy: " + day + "/" + month + "/" + year);
-                String date = day + "/" + (month+1) + "/" + year;
+                String date = day + "/" + (month+1) + "/" + (year+543);
                 mDisplayDate.setText(date);
             }
         };

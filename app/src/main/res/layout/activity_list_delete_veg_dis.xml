@@ -22,8 +22,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="15dp"
                 android:src="@drawable/ic_action_back"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp" />
+                android:textColor="#FFFFFF" />
 
 
             <TextView
@@ -33,7 +32,7 @@
                 android:fontFamily="@font/kanit_light"
                 android:text="ลบข้อมูล"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textAppearance="@style/TextAppearance.AppCompat"/>
 
         </RelativeLayout>

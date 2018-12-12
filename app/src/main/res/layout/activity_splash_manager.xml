@@ -16,7 +16,7 @@
             android:id="@+id/splashMn"
             android:layout_width="300dp"
             android:layout_height="150dp"
-            android:src="@drawable/c"
+            android:src="@drawable/data"
             android:layout_gravity="center"/>
         <TextView
             android:id="@+id/splashMn1"
@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:textSize="24dp"
             android:layout_marginTop="20dp"
-            android:text="สอบถามผู้เชี่ยวชาญ"
+            android:text="จัดการข้อมูล"
             android:fontFamily="@font/kanit_light"
             android:textColor="#FFFFFF"/>
         <ProgressBar

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivityManager"
-    android:background="#E0E0E0"
+    android:background="#ECEFF1"
     >
 
     <android.support.design.widget.AppBarLayout
@@ -24,8 +24,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="15dp"
                 android:src="@drawable/ic_action_back"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp" />
+                android:textColor="#FFFFFF" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

@@ -142,7 +142,7 @@
                     android:id="@+id/DetailNameCM"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="110dp"
+                    android:layout_marginLeft="95dp"
                     android:layout_marginRight="15dp"
                     android:layout_marginTop="5dp"
                     android:fontFamily="@font/kanit_extralight"
@@ -296,9 +296,9 @@
                 <ImageView
                     android:id="@+id/DetailVegImageQR"
                     android:layout_width="match_parent"
-                    android:layout_height="350px"
+                    android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:textSize="20sp" />
+                    />
             </RelativeLayout>
             <TextView
                 android:id="@+id/dialogButtonOK"

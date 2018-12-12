@@ -9,6 +9,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import project.bc.nu.projects.Admin;
 import project.bc.nu.projects.R;
 import project.bc.nu.projects.MainActivityManager;
 import project.bc.nu.projects.qrcode.QRCodeMainActivity;
@@ -27,7 +28,7 @@ public class SplashScreenManager extends AppCompatActivity {
 
         runnable = new Runnable() {
             public void run() {
-                Intent intent = new Intent(SplashScreenManager.this,MainActivityManager.class);
+                Intent intent = new Intent(SplashScreenManager.this,Admin.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
                 finish();

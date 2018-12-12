@@ -9,20 +9,20 @@ import project.bc.nu.projects.SQLite.myDBClass.TABLE_VEG
 import java.util.*
 import kotlin.collections.ArrayList
 
-class MyDB(private val context: Context) : SQLiteOpenHelper(context, MyDB.DatabaseName, null, 1) {
+class MyDB(public val context: Context) : SQLiteOpenHelper(context, MyDB.DatabaseName, null, 1) {
 
-    private val ID = "VEGID"
-    private var TYPE = "VEGTYPE"
-    private var NAME = "VEGNAME"
+    public val ID = "VEGID"
+    public var TYPE = "VEGTYPE"
+    public var NAME = "VEGNAME"
 
-    private var DATE_START = "DATE"
-    private var DATE_STOP = "STOP"
-    private var OBJECTIVE = "OBJECTIVE"
+    public var DATE_START = "DATE"
+    public var DATE_STOP = "STOP"
+    public var OBJECTIVE = "OBJECTIVE"
 
-    private var DAY = "DAY"
-    private var MONTH = "MONTH"
-    private var YEAR = "YEAR"
-    private var PASS = "PASS"
+    public var DAY = "DAY"
+    public var MONTH = "MONTH"
+    public var YEAR = "YEAR"
+    public var PASS = "PASS"
 
 
     override fun onCreate(db: SQLiteDatabase?) {
@@ -33,7 +33,7 @@ class MyDB(private val context: Context) : SQLiteOpenHelper(context, MyDB.Databa
         db.execSQL("CREATE TABLE ${MyDB.myData} (_id INTEGER PRIMARY KEY AUTOINCREMENT, $ID INTEGER,$NAME TEXT,$YEAR INTEGER,$MONTH INTEGER,$DAY INTEGER,$PASS INTEGER)")
 
 
-        db.init()
+      db.init()
 
     }
 
@@ -46,31 +46,31 @@ class MyDB(private val context: Context) : SQLiteOpenHelper(context, MyDB.Databa
         this.insertTable(38, "กินหัวและกินราก", "กระเทียม")
 
        // this.insertTimeline(1,"กะหล่ำดอก", 0, "เริ่มปลูก กะหล่ำดอก")
-        this.insertTimeline(1,"กะหล่ำดอก", 0, "ใส่ปุ๋ยครั่งที่ 1 " + "สูตร 46-0-0 อัตรา 30 กก./ไร่")
-        this.insertTimeline(1,"กะหล่ำดอก", 2, "ใส่ปุ๋ยครั่งที่ 2 " + "สูตร 15-15-15 อัตรา 50 กก./ไร่")
-        this.insertTimeline(1,"กะหล่ำดอก", 3, "ใส่ปุ๋ยครั่งที่ 3 "+"สูตร 13-13-21 หรือ 14-14-21 อัตรา 50 กก./ไร่")
-        this.insertTimeline(1,"กะหล่ำดอก", 10, "เริ่มเก็บเกี่ยว กะหล่ำดอก")
+        this.insertTimeline(1,"กะหล่ำดอก", 6, "ใส่ปุ๋ยครั่งที่ 1 " + "สูตร 46-0-0 อัตรา 30 กก./ไร่")
+        this.insertTimeline(1,"กะหล่ำดอก", 19, "ใส่ปุ๋ยครั่งที่ 2 " + "สูตร 15-15-15 อัตรา 50 กก./ไร่")
+        this.insertTimeline(1,"กะหล่ำดอก", 39, "ใส่ปุ๋ยครั่งที่ 3 "+"สูตร 13-13-21 หรือ 14-14-21 อัตรา 50 กก./ไร่")
+        this.insertTimeline(1,"กะหล่ำดอก", 49, "เริ่มเก็บเกี่ยว กะหล่ำดอก มีหัวที่ห่อแน่นและมีขนาดพอเหมาะ")
 
       //  this.insertTimeline(7,"บวบเหลี่ยม", 0, "เริ่มปลูก บวบเหลี่ยม")
-        this.insertTimeline(7,"บวบเหลี่ยม", 0, "ใส่ปุ๋ยครั่งที่ 1 " + "สูตร 46-0-0 อัตรา 30 กก./ไร่")
-        this.insertTimeline(7,"บวบเหลี่ยม", 20, "ใส่ปุ๋ยครั่งที่ 2 " + "สูตร 15-15-15 หรือ 16-16-16 อัตรา 40 กก./ไร่")
-        this.insertTimeline(7,"บวบเหลี่ยม", 30, "ใส่ปุ๋ยครั่งที่ 3 " + "สูตร 13-13-21 อัตรา 30-50 กก./ไร่")
-        this.insertTimeline(7,"บวบเหลี่ยม", 40, "เริ่มเก็บเกี่ยว บวบเหลี่ยม")
+        this.insertTimeline(7,"บวบเหลี่ยม", 6, "ใส่ปุ๋ยครั่งที่ 1 " + "สูตร 46-0-0 อัตรา 30 กก./ไร่")
+        this.insertTimeline(7,"บวบเหลี่ยม", 19, "ใส่ปุ๋ยครั่งที่ 2 " + "สูตร 15-15-15 หรือ 16-16-16 อัตรา 40 กก./ไร่")
+        this.insertTimeline(7,"บวบเหลี่ยม", 29, "ใส่ปุ๋ยครั่งที่ 3 " + "สูตร 13-13-21 อัตรา 30-50 กก./ไร่")
+        this.insertTimeline(7,"บวบเหลี่ยม", 39, "เริ่มเก็บเกี่ยว บวบเหลี่ยม เมื่อขนาดพอเหมาะไม่อ่อนหรือแก่เกินไป")
 
       //  this.insertTimeline(12,"มะเขือเทศ", 0, "เริ่มปลูก มะเขือเทศ")
-        this.insertTimeline(12,"มะเขือเทศ", 0, "ใส่ปุ๋ยครั่งที่ 1 " + "สูตร 13-13-21 อัตรา 100 กก./ไร่")
-        this.insertTimeline(12,"มะเขือเทศ", 52, "ใส่ปุ๋ยครั่งที่ 2 " + "สูตร 13-13-21")
-        this.insertTimeline(12,"มะเขือเทศ", 57, "ใส่ปุ๋ยครั่งที่ 3 " + "สูตร 13-13-21")
-        this.insertTimeline(12,"มะเขือเทศ", 70, "เริ่มเก็บเกี่ยว มะเขือเทศ")
+        this.insertTimeline(12,"มะเขือเทศ", 6, "ใส่ปุ๋ยครั่งที่ 1 " + "สูตร 13-13-21 อัตรา 100 กก./ไร่")
+        this.insertTimeline(12,"มะเขือเทศ", 14, "ใส่ปุ๋ยครั่งที่ 2 " + "สูตร 13-13-21")
+        this.insertTimeline(12,"มะเขือเทศ", 19, "ใส่ปุ๋ยครั่งที่ 3 " + "สูตร 13-13-21")
+        this.insertTimeline(12,"มะเขือเทศ", 69, "เริ่มเก็บเกี่ยว มะเขือเทศ ผลเริ่มมีผลสีแดงหรือสีส้มแก่")
 
      //   this.insertTimeline(20,"คะน้าฮ้องกง", 0, "เริ่มปลูก คะน้าฮ้องกง")
-        this.insertTimeline(20,"คะน้าฮ้องกง", 0, "ใส่ปุ๋ยครั่งที่ 1 " + "สูตร 46–0–0 หรือ 21–0–0 อัตรา 120 กก./ไร่")
-        this.insertTimeline(20,"คะน้าฮ้องกง", 14, "ใส่ปุ๋ยครั่งที่ 2 " + "สูตร 21–0–0 ผสมปุ๋ยสูตร 15–15–15 อัตรา 2:1 120 กก./ไร่")
-        this.insertTimeline(20,"คะน้าฮ้องกง", 35, "เริ่มเก็บเกี่ยว คะน้าฮ้องกง")
+        this.insertTimeline(20,"คะน้าฮ้องกง", 6, "ใส่ปุ๋ยครั่งที่ 1 " + "สูตร 46–0–0 หรือ 21–0–0 อัตรา 120 กก./ไร่")
+        this.insertTimeline(20,"คะน้าฮ้องกง", 13, "ใส่ปุ๋ยครั่งที่ 2 " + "สูตร 21–0–0 ผสมปุ๋ยสูตร 15–15–15 อัตรา 2:1 120 กก./ไร่")
+        this.insertTimeline(20,"คะน้าฮ้องกง", 34, "เริ่มเก็บเกี่ยว คะน้าฮ้องกง เมื่อเริ่มมีดอก")
 
        // this.insertTimeline(38,"กระเทียม", 0, "เริ่มปลูก กระเทียม")
-        this.insertTimeline(38,"กระเทียม", 0, "ใส่ปุ๋ยครั่งที่ 1 " + "สูตร 46–0–0 หรือ 21–0–0 อัตรา 120 กก./ไร่")
-        this.insertTimeline(38,"กระเทียม", 90, "เริ่มเก็บเกี่ยว กระเทียม")
+        this.insertTimeline(38,"กระเทียม", 9, "ใส่ปุ๋ยสูตร 46 – 0 – 0 หรือ 21 – 0 – 0 อัตรา 25 – 30 กิโลกรัมต่อไร่")
+        this.insertTimeline(38,"กระเทียม", 89, "เริ่มเก็บเกี่ยว กระเทียม เมื่อใบเปลื่ยนเป็นสีเหลืองแห้งเหี่ยวลง")
 
         var values = ContentValues()
         values.apply {
@@ -109,7 +109,7 @@ class MyDB(private val context: Context) : SQLiteOpenHelper(context, MyDB.Databa
         thisSqlite().execSQL("UPDATE $myData SET $ID = ${0} , $NAME = '${""}',$YEAR = ${0} ,$MONTH = ${0} , $DAY = ${0} ,$PASS = 0")
     }
 
-    private fun SQLiteDatabase.insertTable(id: Int, type: String, name: String) {
+    fun SQLiteDatabase.insertTable(id: Int, type: String, name: String) {
         //this.execSQL("INSERT INTO ${TimelineSQ.resourceTableName} ($ID,$TYPE,$NAME) VALUES ($id,$type,$name)")
 
         val values = ContentValues()
@@ -122,7 +122,7 @@ class MyDB(private val context: Context) : SQLiteOpenHelper(context, MyDB.Databa
         this.insert(MyDB.resourceTableName, null, values)
     }
 
-    private fun SQLiteDatabase.insertTimeline(id: Int,veg_name: String, start: Int, objective: String) {
+    fun SQLiteDatabase.insertTimeline(id: Int,veg_name: String, start: Int, objective: String) {
         //this.execSQL("INSERT INTO ${TimelineSQ.resourceTimeLine} ($id,$start,$stop,$objective) VALUES ($id,$start,$stop,$objective)")
         var values = ContentValues()
         values.apply {
@@ -156,12 +156,12 @@ class MyDB(private val context: Context) : SQLiteOpenHelper(context, MyDB.Databa
         }
     }
 
-    private fun thisSqlite(): SQLiteDatabase {
+    public fun thisSqlite(): SQLiteDatabase {
         return this.writableDatabase
     }
 
 
-    private fun Cursor.getAllTimeline(): ArrayList<Timeline> {
+    public fun Cursor.getAllTimeline(): ArrayList<Timeline> {
         var data = ArrayList<Timeline>()
         return try {
             this.apply {
@@ -179,7 +179,7 @@ class MyDB(private val context: Context) : SQLiteOpenHelper(context, MyDB.Databa
     }
 
 
-    private fun Cursor.getAllVegatable(): ArrayList<Vegatable> {
+    public fun Cursor.getAllVegatable(): ArrayList<Vegatable> {
         var data = ArrayList<Vegatable>()
         return try {
             this.apply {
@@ -197,7 +197,7 @@ class MyDB(private val context: Context) : SQLiteOpenHelper(context, MyDB.Databa
         }
     }
 
-    private fun Cursor.getMyVegatable(): MyVegatable {
+    public fun Cursor.getMyVegatable(): MyVegatable {
         return try {
 
             this.moveToFirst()
@@ -218,11 +218,11 @@ class MyDB(private val context: Context) : SQLiteOpenHelper(context, MyDB.Databa
         }
     }
 
-    private fun Cursor.getInt(id: String): Int {
+    public fun Cursor.getInt(id: String): Int {
         return this.getInt(this.getColumnIndex(id))
     }
 
-    private fun Cursor.getString(id: String): String {
+    public fun Cursor.getString(id: String): String {
         return this.getString(this.getColumnIndex(id))
     }
 
@@ -247,7 +247,6 @@ class MyDB(private val context: Context) : SQLiteOpenHelper(context, MyDB.Databa
 
     data class Timeline(var DATE: Int, var OBJECTIVE: String)
     data class Vegatable(var NAME: String, var ID: Int)
-
     data class MyVegatable(var NAME: String, var ID: Int,  var YEAR: Int, var MONTH: Int, var DAY: Int,var PASS :Int)
 
 }

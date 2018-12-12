@@ -211,12 +211,13 @@ public class VinitMainActivity extends AppCompatActivity
                 Intent h = new Intent(VinitMainActivity.this, MainActivity.class);
                 h.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(h);
-
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 break;
             case R.id.nav_gen:
                 Intent i = new Intent(VinitMainActivity.this, SplashScreenGenQR.class);
                 i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(i);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 break;
             case R.id.nav_vinit:
                 break;
@@ -224,11 +225,13 @@ public class VinitMainActivity extends AppCompatActivity
                 Intent t = new Intent(VinitMainActivity.this, SplashScreenCalendar.class);
                 t.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(t);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 break;
             case R.id.nav_manager:
                 Intent m = new Intent(VinitMainActivity.this, SplashScreenManager.class);
                 m.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(m);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 break;
 
         }

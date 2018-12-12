@@ -98,7 +98,7 @@ public class SelectSyndrome4 extends AppCompatActivity {
             public void onClick(View v) {
 
                 SelectSyndrome4.this.finish();
-
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
         });
         final Button main = (Button) findViewById(R.id.btnMain1);
@@ -118,8 +118,8 @@ public class SelectSyndrome4 extends AppCompatActivity {
         final CheckBox btn2 = (CheckBox) findViewById(R.id.Cbtn22);
 
         // turn off API = 19
-       // btn1.setTypeface(ResourcesCompat.getFont(context, R.font.kanit_extralight));
-       // btn2.setTypeface(ResourcesCompat.getFont(context, R.font.kanit_extralight));
+        btn1.setTypeface(ResourcesCompat.getFont(context, R.font.kanit_extralight));
+        btn2.setTypeface(ResourcesCompat.getFont(context, R.font.kanit_extralight));
         AS.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -129,6 +129,7 @@ public class SelectSyndrome4 extends AppCompatActivity {
                 if (btn1.isChecked() && btn2.isChecked()) {
                     Intent newActivity = new Intent(SelectSyndrome4.this, SelectSyndrome5.class);
                     startActivity(newActivity);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 } else if (btn1.isChecked()) {
                     String strVegdisID = "2";
                     Intent newActivity = new Intent(SelectSyndrome4.this, SelectSyndrome12.class);

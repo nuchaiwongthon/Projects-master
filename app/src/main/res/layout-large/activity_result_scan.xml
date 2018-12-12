@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".qrcode.ResultScanQRActivity"
+    android:background="#ECEFF1"
    >
 
     <android.support.design.widget.AppBarLayout
@@ -77,7 +78,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="15dp">
+                    android:layout_marginTop="1dp">
 
                     <ImageView
                         android:id="@+id/ResultImage"

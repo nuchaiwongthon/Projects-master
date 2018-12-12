@@ -3,6 +3,7 @@ package project.bc.nu.projects.vinit;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -106,7 +107,9 @@ public class SelectSyndrome2 extends AppCompatActivity {
                 });
 
 
-                imageDialog.create();
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    imageDialog.create();
+                }
                 imageDialog.show();
 
             }
@@ -115,8 +118,8 @@ public class SelectSyndrome2 extends AppCompatActivity {
         final CheckBox btn2 = (CheckBox) findViewById(R.id.Cbtn22);
 
         // turn off API = 19
-        //btn1.setTypeface(ResourcesCompat.getFont(context, R.font.kanit_extralight));
-       // btn2.setTypeface(ResourcesCompat.getFont(context, R.font.kanit_extralight));
+        btn1.setTypeface(ResourcesCompat.getFont(context, R.font.kanit_extralight));
+        btn2.setTypeface(ResourcesCompat.getFont(context, R.font.kanit_extralight));
         AS.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -126,6 +129,7 @@ public class SelectSyndrome2 extends AppCompatActivity {
                 if (btn1.isChecked() && btn2.isChecked()) {
                     Intent newActivity = new Intent(SelectSyndrome2.this, SelectSyndrome3.class);
                     startActivity(newActivity);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 } else if (btn1.isChecked()) {
                     String strVegdisID = "4";
                     Intent newActivity = new Intent(SelectSyndrome2.this, SelectSyndrome7.class);

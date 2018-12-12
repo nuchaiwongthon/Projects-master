@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivityManager"
     android:background="#ECEFF1"
 
     >
@@ -32,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:fontFamily="@font/kanit_light"
-                android:text="จัดการข้อมูลผักสวนครัว"
+                android:text="จัดการข้อมูลการดูแลรักษา"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp" />
 

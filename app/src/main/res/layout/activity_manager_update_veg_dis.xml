@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_main"
+    android:background="#ECEFF1"
     tools:context=".manager.UpdateActivityManager">
 
     <android.support.design.widget.AppBarLayout
@@ -36,7 +36,7 @@
                 android:text="แก้ไขข้อมูล"
                 android:textAppearance="@style/TextAppearance.AppCompat"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
             <ImageView
                 android:id="@+id/SaveBtnEdit"
@@ -111,7 +111,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_marginRight="15dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
                         android:fontFamily="@font/kanit_light"
                         android:text="ชื่อโรค : "
                         android:textAppearance="@style/TextAppearance.AppCompat"
@@ -125,7 +125,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="75dp"
                         android:layout_marginRight="15dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
                         android:background="@drawable/background_text"
                         android:fontFamily="@font/kanit_extralight"
                         android:padding="2dp"
@@ -145,7 +145,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_marginRight="15dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
                         android:fontFamily="@font/kanit_light"
                         android:text="ส่วนที่ติดโรค : "
                         android:textAppearance="@style/TextAppearance.AppCompat"
@@ -159,7 +159,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="115dp"
                         android:layout_marginRight="15dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
                         android:background="@drawable/background_text"
                         android:fontFamily="@font/kanit_extralight"
                         android:padding="2dp"
@@ -177,7 +177,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_marginRight="15dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
                         android:fontFamily="@font/kanit_light"
                         android:text="ชนิดที่ติดโรค : "
                         android:textAppearance="@style/TextAppearance.AppCompat"
@@ -189,10 +189,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="115dp"
                         android:layout_marginRight="15dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
                         android:background="@drawable/background_text"
                         android:fontFamily="@font/kanit_extralight"
-                        android:padding="2dp"
+                        android:minLines="3"
                         android:textSize="16sp" />
 
 
@@ -209,7 +209,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_marginRight="15dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
                         android:fontFamily="@font/kanit_light"
                         android:text="สาเหตุของโรค : "
                         android:textAppearance="@style/TextAppearance.AppCompat"
@@ -221,10 +221,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="125dp"
                         android:layout_marginRight="15dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
                         android:background="@drawable/background_text"
                         android:fontFamily="@font/kanit_extralight"
-                        android:padding="2dp"
+                        android:minLines="2"
                         android:textAppearance="@style/TextAppearance.AppCompat"
                         android:textSize="16dp" />
                 </RelativeLayout>
@@ -255,7 +255,7 @@
                         android:background="@drawable/background_text"
                         android:fontFamily="@font/kanit_extralight"
                         android:gravity="top"
-                        android:padding="2dp"
+                        android:minLines="3"
                         android:textAppearance="@style/TextAppearance.AppCompat"
                         android:textSize="16dp" />
                 </RelativeLayout>
@@ -285,7 +285,7 @@
                         android:background="@drawable/background_text"
                         android:fontFamily="@font/kanit_extralight"
                         android:gravity="top"
-                        android:padding="2dp"
+                        android:minLines="3"
                         android:textAppearance="@style/TextAppearance.AppCompat"
                         android:textSize="16dp" />
 

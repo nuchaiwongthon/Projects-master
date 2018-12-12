@@ -21,6 +21,7 @@ import project.bc.nu.projects.SQLite.myDBClass;
 public class SelectSyndrome3 extends AppCompatActivity {
     private RadioGroup mRadioGroup;
     final Context context = this;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -117,8 +118,8 @@ public class SelectSyndrome3 extends AppCompatActivity {
         final CheckBox btn2 = (CheckBox) findViewById(R.id.Cbtn22);
 
         // turn off API = 19
-       // btn1.setTypeface(ResourcesCompat.getFont(context, R.font.kanit_extralight));
-       // btn2.setTypeface(ResourcesCompat.getFont(context, R.font.kanit_extralight));
+        btn1.setTypeface(ResourcesCompat.getFont(context, R.font.kanit_extralight));
+        btn2.setTypeface(ResourcesCompat.getFont(context, R.font.kanit_extralight));
         AS.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -179,6 +180,7 @@ public class SelectSyndrome3 extends AppCompatActivity {
 
         }
     }
+
     @Override
     public void onBackPressed() {
 

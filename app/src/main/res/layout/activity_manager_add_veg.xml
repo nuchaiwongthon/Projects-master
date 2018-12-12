@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_main"
+    android:background="#ECEFF1"
     tools:context=".manager.AddActivityManager">
 
     <android.support.design.widget.AppBarLayout
@@ -86,9 +86,9 @@
                         android:layout_marginLeft="70dp"
                         android:layout_marginRight="15dp"
                         android:layout_marginTop="10dp"
+                        android:padding="2dp"
                         android:background="@drawable/background_text"
                         android:fontFamily="@font/kanit_extralight"
-                        android:padding="2dp"
                         android:textSize="16sp" />
 
 
@@ -102,7 +102,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_marginRight="15dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
                         android:fontFamily="@font/kanit_light"
                         android:text="Path : "
                         android:textAppearance="@style/TextAppearance.AppCompat"
@@ -114,10 +114,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="70dp"
                         android:layout_marginRight="15dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
+                        android:padding="2dp"
                         android:background="@drawable/background_text"
                         android:fontFamily="@font/kanit_extralight"
-                        android:padding="2dp"
                         android:textSize="16sp" />
 
 
@@ -125,7 +125,7 @@
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp">
+                    android:layout_marginTop="5dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -135,7 +135,6 @@
                         android:fontFamily="@font/kanit_light"
                         android:text="ชนิดผัก : "
                         android:textAppearance="@style/TextAppearance.AppCompat"
-
                         android:textSize="16dp" />
 
                     <EditText
@@ -145,16 +144,15 @@
                         android:layout_marginLeft="80dp"
                         android:layout_marginRight="15dp"
                         android:layout_alignParentRight="true"
+                        android:padding="2dp"
                         android:background="@drawable/background_text"
                         android:fontFamily="@font/kanit_extralight"
-                        android:gravity="top"
-                        android:padding="2dp"
                         android:textSize="16sp" />
                 </RelativeLayout>
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp">
+                    android:layout_marginTop="5dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -176,14 +174,13 @@
                         android:layout_alignParentRight="true"
                         android:background="@drawable/background_text"
                         android:fontFamily="@font/kanit_extralight"
-                        android:gravity="top"
                         android:padding="2dp"
                         android:textSize="16sp" />
                 </RelativeLayout>
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp">
+                    android:layout_marginTop="5dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -193,7 +190,6 @@
                         android:fontFamily="@font/kanit_light"
                         android:text="ชื่อสามัญ : "
                         android:textAppearance="@style/TextAppearance.AppCompat"
-
                         android:textSize="16dp" />
 
                     <EditText
@@ -206,13 +202,13 @@
                         android:background="@drawable/background_text"
                         android:fontFamily="@font/kanit_extralight"
                         android:gravity="top"
-                        android:padding="2dp"
+                        android:minLines="2"
                         android:textSize="16sp" />
                 </RelativeLayout>
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp">
+                    android:layout_marginTop="5dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -222,7 +218,6 @@
                         android:fontFamily="@font/kanit_light"
                         android:text="ชื่อวิทยาศาสตร์ : "
                         android:textAppearance="@style/TextAppearance.AppCompat"
-
                         android:textSize="16dp" />
 
                     <EditText
@@ -235,7 +230,7 @@
                         android:background="@drawable/background_text"
                         android:fontFamily="@font/kanit_extralight"
                         android:gravity="top"
-                        android:padding="2dp"
+                        android:minLines="2"
                         android:textSize="16sp" />
                 </RelativeLayout>
 
@@ -261,7 +256,7 @@
                     android:background="@drawable/background_text"
                     android:fontFamily="@font/kanit_extralight"
                     android:gravity="top"
-                    android:minLines="2"
+                    android:minLines="3"
                     android:textSize="16sp" />
 
                 <TextView
@@ -271,6 +266,7 @@
                     android:layout_marginRight="15dp"
                     android:fontFamily="@font/kanit_light"
                     android:text="คุณค่าทางอาหาร : "
+                    android:layout_marginTop="5dp"
                     android:textAppearance="@style/TextAppearance.AppCompat"
                     android:textSize="16dp" />
 
@@ -283,7 +279,7 @@
                     android:background="@drawable/background_text"
                     android:fontFamily="@font/kanit_extralight"
                     android:gravity="top"
-                    android:minLines="2"
+                    android:minLines="3"
                     android:textSize="16sp" />
 
                 <TextView
@@ -306,7 +302,7 @@
                     android:background="@drawable/background_text"
                     android:fontFamily="@font/kanit_extralight"
                     android:gravity="top"
-                    android:minLines="2"
+                    android:minLines="3"
                     android:textSize="16sp" />
 
                 <TextView
@@ -329,7 +325,7 @@
                     android:background="@drawable/background_text"
                     android:fontFamily="@font/kanit_extralight"
                     android:gravity="top"
-                    android:minLines="2"
+                    android:minLines="3"
                     android:textSize="16sp" />
 
             </LinearLayout>

@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.text.Editable;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -18,7 +19,7 @@ public class myDBClass extends SQLiteOpenHelper {
     // Database Version
     private static final int DATABASE_VERSION = 1;
     // Database Name
-    private static final String DATABASE_NAME = "database1.db";
+    private static final String DATABASE_NAME = "database.db";
     // Table Name
     public static final String TABLE_VEGDIS = "vegetabledisease";
 
@@ -62,89 +63,21 @@ public class myDBClass extends SQLiteOpenHelper {
                 "veg_type TEXT," +
                 "veg_gallery_name TEXT," +
                 "veg_gallery_path TEXT);");
-
-        db.execSQL("CREATE TABLE TABLE_NAME (_id INTEGER PRIMARY KEY AUTOINCREMENT, ID INTEGER,TYPE TEXT,NAME TEXT)");
-        db.execSQL("CREATE TABLE TABLE_TIMELINE (_id INTEGER PRIMARY KEY AUTOINCREMENT, ID INTEGER,NAME,DATE_START INTEGER,OBJECTIVE TEXT)");
-
-        db.execSQL("CREATE TABLE TABLE_DATE_START (_id INTEGER PRIMARY KEY AUTOINCREMENT, ID INTEGER,NAME TEXT,YEAR INTEGER,MONTH INTEGER,DAY INTEGER,PASS INTEGER)");
-        init(db);
-
-    }
-
-    public void init(SQLiteDatabase db) {
-
-        this.insertTable(1, "ผักกินดอก", "กะหล่ำดอก");
-        this.insertTable(7, "ผักกินฝักและผล", "บวบเหลี่ยม");
-        this.insertTable(12, "ผักกินฝักและผล", "มะเขือเทศ");
-        this.insertTable(20, "ผักกินใบและลำต้น", "คะน้าฮ้องกง");
-        this.insertTable(38, "กินหัวและกินราก", "กระเทียม");
-/*
-        // this.insertTimeline(1,"กะหล่ำดอก", 0, "เริ่มปลูก กะหล่ำดอก")
-        this.insertTimeline(1,"กะหล่ำดอก", 0, "ใส่ปุ๋ยครั่งที่ 1 " + "สูตร 46-0-0 อัตรา 30 กก./ไร่");
-        this.insertTimeline(1,"กะหล่ำดอก", 2, "ใส่ปุ๋ยครั่งที่ 2 " + "สูตร 15-15-15 อัตรา 50 กก./ไร่");
-        this.insertTimeline(1,"กะหล่ำดอก", 3, "ใส่ปุ๋ยครั่งที่ 3 "+"สูตร 13-13-21 หรือ 14-14-21 อัตรา 50 กก./ไร่");
-        this.insertTimeline(1,"กะหล่ำดอก", 10, "เริ่มเก็บเกี่ยว กะหล่ำดอก");
-
-        //  this.insertTimeline(7,"บวบเหลี่ยม", 0, "เริ่มปลูก บวบเหลี่ยม")
-        this.insertTimeline(7,"บวบเหลี่ยม", 0, "ใส่ปุ๋ยครั่งที่ 1 " + "สูตร 46-0-0 อัตรา 30 กก./ไร่");
-        this.insertTimeline(7,"บวบเหลี่ยม", 20, "ใส่ปุ๋ยครั่งที่ 2 " + "สูตร 15-15-15 หรือ 16-16-16 อัตรา 40 กก./ไร่");
-        this.insertTimeline(7,"บวบเหลี่ยม", 30, "ใส่ปุ๋ยครั่งที่ 3 " + "สูตร 13-13-21 อัตรา 30-50 กก./ไร่");
-        this.insertTimeline(7,"บวบเหลี่ยม", 40, "เริ่มเก็บเกี่ยว บวบเหลี่ยม")
-
-        //  this.insertTimeline(12,"มะเขือเทศ", 0, "เริ่มปลูก มะเขือเทศ")
-        this.insertTimeline(12,"มะเขือเทศ", 0, "ใส่ปุ๋ยครั่งที่ 1 " + "สูตร 13-13-21 อัตรา 100 กก./ไร่");
-        this.insertTimeline(12,"มะเขือเทศ", 52, "ใส่ปุ๋ยครั่งที่ 2 " + "สูตร 13-13-21");
-        this.insertTimeline(12,"มะเขือเทศ", 57, "ใส่ปุ๋ยครั่งที่ 3 " + "สูตร 13-13-21");
-        this.insertTimeline(12,"มะเขือเทศ", 70, "เริ่มเก็บเกี่ยว มะเขือเทศ");
-
-        //   this.insertTimeline(20,"คะน้าฮ้องกง", 0, "เริ่มปลูก คะน้าฮ้องกง")
-        this.insertTimeline(20,"คะน้าฮ้องกง", 0, "ใส่ปุ๋ยครั่งที่ 1 " + "สูตร 46–0–0 หรือ 21–0–0 อัตรา 120 กก./ไร่");
-        this.insertTimeline(20,"คะน้าฮ้องกง", 14, "ใส่ปุ๋ยครั่งที่ 2 " + "สูตร 21–0–0 ผสมปุ๋ยสูตร 15–15–15 อัตรา 2:1 120 กก./ไร่");
-        this.insertTimeline(20,"คะน้าฮ้องกง", 35, "เริ่มเก็บเกี่ยว คะน้าฮ้องกง");
-
-        // this.insertTimeline(38,"กระเทียม", 0, "เริ่มปลูก กระเทียม")
-        this.insertTimeline(38,"กระเทียม", 0, "ใส่ปุ๋ยครั่งที่ 1 " + "สูตร 46–0–0 หรือ 21–0–0 อัตรา 120 กก./ไร่");
-        this.insertTimeline(38,"กระเทียม", 90, "เริ่มเก็บเกี่ยว กระเทียม");*/
-        ContentValues Val = new ContentValues();
-
-        Val.put("ID", 0);
-        Val.put("YEAR", 0);
-        Val.put("MONTH", 0);
-        Val.put("DAY", 0);
-        Val.put("PASS",0);
-
-
-        db.insert(TABLE_DATE_START, null, Val);
+        db.execSQL("create table " + TABLE_TIMELINE + " (timeline_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL" +
+                ",veg_id TEXT," +
+                "veg_name TEXT," +
+                "timeline_date TEXT," +
+                "timeline_obj TEXT);");
 
 
     }
 
-
-    public long insertTable(int id,String type,String name) {
-        //this.execSQL("INSERT INTO ${TimelineSQ.resourceTableName} ($ID,$TYPE,$NAME) VALUES ($id,$type,$name)")
-        try {
-            SQLiteDatabase db;
-            db = this.getWritableDatabase(); // Write Data
-
-            ContentValues Val = new ContentValues();
-            Val.put("ID", id);
-            Val.put("TYPE", type);
-            Val.put("NAME", name);
-
-            long rows = db.insert(TABLE_VEGDIS, null, Val);
-
-            db.close();
-            return rows; // return rows inserted.
-        }catch (Exception e) {
-            return -1;
-        }
-
-        }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_VEGDIS);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_VEG);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_TIMELINE);
         // Re Create on method  onCreate
         onCreate(db);
     }
@@ -157,14 +90,42 @@ public class myDBClass extends SQLiteOpenHelper {
     public Cursor getData(String VID) {
         SQLiteDatabase db;
         db = this.getReadableDatabase(); // Read Data
-        return db.rawQuery("SELECT * FROM vegetabledisease ", null);
+        return db.rawQuery("SELECT * FROM timeline_date ", null);
 
     }
 
+    // Insert Data ปฏิทิน
+    public long InsertDataTimeline(String veg_id, String veg_name, String timeline_date, String timeline_obj) {
+
+        try {
+
+
+            SQLiteDatabase db;
+            db = this.getWritableDatabase(); // Write Data
+
+
+            ContentValues Val = new ContentValues();
+            Val.put("veg_id", veg_id);
+            Val.put("veg_name", veg_name);
+            Val.put("timeline_date", timeline_date);
+            Val.put("timeline_obj", timeline_obj);
+
+
+            long rows = db.insert(TABLE_TIMELINE, null, Val);
+
+            db.close();
+            return rows; // return rows inserted.
+
+        } catch (Exception e) {
+            return -1;
+        }
+
+
+    }
 
     // Insert Data โรคผัก
     public long InsertData(String strVegdisName, String strVegdisArea, String strVegdisType, String strVegdisCause,
-                           String strSyndrome1, String strSyndrome2, String strProtect, String strRemedy,String VegdisGallaryName, String VegdisGallaryPath) {
+                           String strSyndrome1, String strSyndrome2, String strProtect, String strRemedy, String VegdisGallaryName, String VegdisGallaryPath) {
 
         try {
 
@@ -199,7 +160,7 @@ public class myDBClass extends SQLiteOpenHelper {
 
     // Insert Data ผัก
     public long InsertDataVeg(String VegNameTH, String VegNameCM, String VegNameSC, String VegStructure,
-                              String VegNutrient, String VegPlant, String VegTreatment,String VegType,String VegGallaryName,String VegGallaryPath) {
+                              String VegNutrient, String VegPlant, String VegTreatment, String VegType, String VegGallaryName, String VegGallaryPath) {
 
         try {
 
@@ -232,7 +193,42 @@ public class myDBClass extends SQLiteOpenHelper {
 
     }
 
+    // Select Data ปฏิทิน
+    public String[] SelectTimeline(String timelineID) {
+        try {
+            String arrData[] = null;
+            SQLiteDatabase db;
+            db = this.getReadableDatabase(); // Read Data
 
+            Cursor cursor = db.query(TABLE_TIMELINE, new String[]{"*"},
+                    "timeline_id=?",
+                    new String[]{String.valueOf(timelineID)}, null, null, null, null);
+
+            if (cursor != null) {
+                if (cursor.moveToFirst()) {
+                    do {
+                        arrData = new String[cursor.getColumnCount()];
+
+                        arrData[0] = cursor.getString(0);
+                        arrData[1] = cursor.getString(1);
+                        arrData[2] = cursor.getString(2);
+                        arrData[3] = cursor.getString(3);
+                        arrData[4] = cursor.getString(4);
+
+                    } while (cursor.moveToNext());
+                }
+            }
+
+            cursor.close();
+            db.close();
+            return arrData;
+
+        } catch (Exception e) {
+            return null;
+        }
+
+
+    }
 
     // Select Data โรคผัก
     public String[] SelectData(String strVegdisID) {
@@ -330,6 +326,48 @@ public class myDBClass extends SQLiteOpenHelper {
 
 
     }
+
+    // Select All Data ผัก
+    public String[][] SelectAllTimeline() {
+        // TODO Auto-generated method stub
+
+        try {
+            String arrData[][] = null;
+            SQLiteDatabase db;
+            db = this.getReadableDatabase(); // Read Data
+
+            String strSQL = "SELECT  * FROM " + TABLE_TIMELINE;
+            Cursor cursor = db.rawQuery(strSQL, null);
+
+            if (cursor != null) {
+                if (cursor.moveToFirst()) {
+                    arrData = new String[cursor.getCount()][cursor.getColumnCount()];
+
+
+                    int i = 0;
+                    do {
+
+                        arrData[i][0] = cursor.getString(0);
+                        arrData[i][1] = cursor.getString(1);
+                        arrData[i][2] = cursor.getString(2);
+                        arrData[i][3] = cursor.getString(3);
+                        arrData[i][4] = cursor.getString(4);
+
+                        i++;
+                    } while (cursor.moveToNext());
+
+                }
+            }
+            cursor.close();
+
+            return arrData;
+
+        } catch (Exception e) {
+            return null;
+        }
+
+    }
+
     // Select All Data ผัก
     public String[][] SelectAllVeg() {
         // TODO Auto-generated method stub
@@ -342,13 +380,12 @@ public class myDBClass extends SQLiteOpenHelper {
             String strSQL = "SELECT  * FROM " + TABLE_VEG;
             Cursor cursor = db.rawQuery(strSQL, null);
 
-            if(cursor != null)
-            {
+            if (cursor != null) {
                 if (cursor.moveToFirst()) {
                     arrData = new String[cursor.getCount()][cursor.getColumnCount()];
 
 
-                    int i= 0;
+                    int i = 0;
                     do {
 
                         arrData[i][0] = cursor.getString(0);
@@ -390,8 +427,7 @@ public class myDBClass extends SQLiteOpenHelper {
             String strSQL = "SELECT  * FROM " + TABLE_VEGDIS;
             Cursor cursor = db.rawQuery(strSQL, null);
 
-            if(cursor != null)
-            {
+            if (cursor != null) {
                 if (cursor.moveToFirst()) {
                     arrData = new String[cursor.getCount()][cursor.getColumnCount()];
                     /***
@@ -409,7 +445,7 @@ public class myDBClass extends SQLiteOpenHelper {
                      *
                      */
 
-                    int i= 0;
+                    int i = 0;
                     do {
                         arrData[i][0] = cursor.getString(0);
                         arrData[i][1] = cursor.getString(1);
@@ -436,7 +472,7 @@ public class myDBClass extends SQLiteOpenHelper {
         }
 
     }
-    // Select All Data ปฏิทิน
+  /*  // Select All Data ปฏิทิน
     public ArrayList<String> SelectAllVeg1() {
         // TODO Auto-generated method stub
 
@@ -468,7 +504,46 @@ public class myDBClass extends SQLiteOpenHelper {
             return null;
         }
 
+    }*/
+
+    // Show All Data โรค
+    public ArrayList<HashMap<String, String>> SelectAllDataTimeline() {
+
+        try {
+
+            ArrayList<HashMap<String, String>> MyArrList = new ArrayList<HashMap<String, String>>();
+            HashMap<String, String> map;
+
+            SQLiteDatabase db;
+            db = this.getReadableDatabase(); // Read Data
+
+            String strSQL = "SELECT  * FROM " + TABLE_TIMELINE;
+            Cursor cursor = db.rawQuery(strSQL, null);
+
+            if (cursor != null) {
+                if (cursor.moveToFirst()) {
+                    do {
+                        map = new HashMap<String, String>();
+                        map.put("timeline_id", cursor.getString(0));
+                        map.put("veg_id", cursor.getString(1));
+                        map.put("veg_name", cursor.getString(2));
+                        map.put("timeline_date", cursor.getString(3));
+                        map.put("timeline_obj", cursor.getString(4));
+
+                        MyArrList.add(map);
+                    } while (cursor.moveToNext());
+                }
+            }
+            cursor.close();
+            db.close();
+            return MyArrList;
+
+        } catch (Exception e) {
+            return null;
+        }
+
     }
+
     // Show All Data โรค
     public ArrayList<HashMap<String, String>> SelectAllData() {
 
@@ -556,10 +631,36 @@ public class myDBClass extends SQLiteOpenHelper {
 
     }
 
+    // Update Data ปฏิทิน
+    public long UpdateTimeline(String timeline_id, String veg_name, String timeline_date, String timeline_obj) {
+
+        try {
+
+
+            SQLiteDatabase db;
+            db = this.getWritableDatabase(); // Write Data
+
+
+            ContentValues Val = new ContentValues();
+            Val.put("veg_name", veg_name);
+            Val.put("timeline_date", timeline_date);
+            Val.put("timeline_obj", timeline_obj);
+
+            long rows = db.update(TABLE_TIMELINE, Val, " timeline_id = ?",
+                    new String[]{String.valueOf(timeline_id)});
+
+            db.close();
+            return rows; // return rows updated.
+
+        } catch (Exception e) {
+            return -1;
+        }
+
+    }
 
     // Update Data โรค
     public long UpdateData(String strVegdisID, String strVegdisName, String strVegdisArea, String strVegdisType, String strVegdisCause,
-                           String strSyndrome1, String strSyndrome2,String strProtect, String strRemedy) {
+                           String strSyndrome1, String strSyndrome2, String strProtect, String strRemedy) {
 
         try {
 
@@ -590,7 +691,7 @@ public class myDBClass extends SQLiteOpenHelper {
 
     // Update Data ผัก
     public long UpdateDataVeg(String VegID, String VegNameTH, String VegNameCM, String VegNameSC, String VegStructure,
-                              String VegNutrient, String VegPlant, String VegTreatment,String VegType,String VegGallaryName,String VegGallaryPath) {
+                              String VegNutrient, String VegPlant, String VegTreatment, String VegType, String VegGallaryName, String VegGallaryPath) {
 
         try {
 
@@ -614,6 +715,28 @@ public class myDBClass extends SQLiteOpenHelper {
 
             db.close();
             return rows; // return rows updated.
+
+        } catch (Exception e) {
+            return -1;
+        }
+
+    }
+
+    // Delete Data ปฏิทิน
+    public long DeleteTimeline(String timeline_id) {
+        // TODO Auto-generated method stub
+
+        try {
+
+            SQLiteDatabase db;
+            db = this.getWritableDatabase(); // Write Data
+
+
+            long rows = db.delete(TABLE_TIMELINE, "timeline_id = ?",
+                    new String[]{String.valueOf(timeline_id)});
+
+            db.close();
+            return rows; // return rows deleted.
 
         } catch (Exception e) {
             return -1;

@@ -248,6 +248,42 @@
             android:label="@string/title_activity_main"
             android:screenOrientation="portrait"
             tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".Admin"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".managertimeline.TimelineActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+
+        <activity
+            android:name=".managertimeline.AddTimeline"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".managertimeline.UpdateTimelineActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".managertimeline.ListShowActivityTimeline"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".managertimeline.ListUpdateTimelineActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".managertimeline.ListDeleteActivityTimeline"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent" />
     </application>
 
 </manifest>

@@ -18,6 +18,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import project.bc.nu.projects.manager.VegDiseaseActivity;
+import project.bc.nu.projects.managertimeline.TimelineActivity;
 import project.bc.nu.projects.managervegetable.VegetableActivity;
 
 public class MainActivityManager extends AppCompatActivity {
@@ -48,7 +49,8 @@ public class MainActivityManager extends AppCompatActivity {
         String[] plants = new String[]{
                 "กรุณาเลือก" ,
                 "ข้อมูลผักสวนครัว",
-                "ข้อมูลโรคผักสวนครัว"
+                "ข้อมูลโรคผักสวนครัว",
+                "ข้อมูลการดูแลรักษา"
         };
 
 
@@ -96,10 +98,13 @@ public class MainActivityManager extends AppCompatActivity {
                         Toast.LENGTH_SHORT).show();
                 if (spin.getSelectedItem().toString().equals("ข้อมูลผักสวนครัว")) {
                     startActivity(new Intent(MainActivityManager.this, VegetableActivity.class));
-                    overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
-                } else if (spin.getSelectedItem().toString().equals("ข้อมูลโรคผักสวนครัว")){
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                } else if (spin.getSelectedItem().toString().equals("ข้อมูลโรคผักสวนครัว")) {
                     startActivity(new Intent(MainActivityManager.this, VegDiseaseActivity.class));
-                    overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                } else if (spin.getSelectedItem().toString().equals("ข้อมูลการดูแลรักษา")) {
+                    startActivity(new Intent(MainActivityManager.this, TimelineActivity.class));
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 }
             }
         });

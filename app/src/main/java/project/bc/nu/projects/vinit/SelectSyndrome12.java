@@ -88,7 +88,7 @@ public class SelectSyndrome12 extends AppCompatActivity {
         final CheckBox btn1 = (CheckBox) findViewById(R.id.Cbtn31);
 
         // turn off API = 19
-       // btn1.setTypeface(ResourcesCompat.getFont(context, R.font.kanit_extralight));
+        btn1.setTypeface(ResourcesCompat.getFont(context, R.font.kanit_extralight));
 
         AS.setOnClickListener(new View.OnClickListener() {
 
