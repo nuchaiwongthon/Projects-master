@@ -302,11 +302,11 @@ public class CalendarMainActivity extends AppCompatActivity {
         mDateSetListener = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-                y = year +543;
+                y = year;
                 m = month + 1;
                 d = day;
                 Log.d(TAG, "onDateSet: mm/dd/yyy: " + day + "/" + month + "/" + year);
-                String date = day + "/" + (month+1) + "/" + (year+543);
+                String date = day + "/" + (month+1) + "/" + (year);
                 mDisplayDate.setText(date);
             }
         };
